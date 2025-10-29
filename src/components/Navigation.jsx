@@ -1,133 +1,130 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
+
+const services = [
+  { name: "Defence of Medical Negligence Claims", path: "/services/defence-of-medical-negligence-claims" },
+  { name: "Labor law compliance", path: "/services/labor-law-compliance" },
+  { name: "Due Diligence & Valuation", path: "/services/due-diligence-and-valuation" },
+  { name: "Design & Construction of Healthcare Facilities", path: "/services/healthcare-facilities" },
+  { name: "Child Custody", path: "/services/child-custody" },
+  { name: "Cruelty", path: "/services/cruelty" },
+  { name: "Judicial Separation", path: "/services/judicial-separation" },
+  { name: "Child Visitation", path: "/services/child-visitation" },
+  { name: "Annulment of Marriage", path: "/services/annulment-of-marriage" },
+  { name: "Mutual Divorce", path: "/services/mutual-divorce" },
+];
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isOnTeal, setIsOnTeal] = useState(true);
-  const navRef = useRef(null);
-  const navigate = useNavigate();
+  const [hovered, setHovered] = useState(false);
   const location = useLocation();
 
-  const links = [
-    { label: "About Us", path: "/about-us" },
-    { label: "Contact Us", path: "/contact-us" },
-    { label: "Services", path: "/services" },
-  ];
+  const isActive = (path) => location.pathname === path;
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const bgColor = window.getComputedStyle(entry.target).backgroundColor;
-          const isWhite =
-            bgColor === "rgb(255, 255, 255)" ||
-            bgColor === "rgb(245, 241, 237)";
-          setIsOnTeal(!isWhite);
-        });
-      },
-      { rootMargin: "-80px 0px 0px 0px", threshold: 0.1 }
-    );
+  // Small delay for smoother hide effect
+  let hideTimeout;
 
-    const sections = document.querySelectorAll("section");
-    sections.forEach((sec) => observer.observe(sec));
+  const handleMouseEnter = () => {
+    clearTimeout(hideTimeout);
+    setHovered(true);
+  };
 
-    return () => observer.disconnect();
-  }, []);
-
-  // Force navbar to teal if on standalone white pages
-  useEffect(() => {
-    if (location.pathname === "/about-us" || location.pathname === "/contact-us") {
-      setIsOnTeal(false);
-    }
-  }, [location.pathname]);
-
-  const handleNavigation = (path) => {
-    navigate(path);
-    setIsMenuOpen(false);
+  const handleMouseLeave = () => {
+    hideTimeout = setTimeout(() => setHovered(false), 150);
   };
 
   return (
-    <>
-      {/* Navbar */}
-      <motion.header
-        ref={navRef}
-        className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6 flex justify-between items-center transition-colors duration-300 ${
-          isOnTeal ? "bg-[#17ada1] text-white" : "bg-white text-[#17ada1] shadow-md"
-        }`}
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+      <nav className="flex justify-between items-center px-8 py-6">
         {/* Logo */}
-        <div
-          className="flex items-center gap-3 cursor-pointer"
-          onClick={() => handleNavigation("/")}
-        >
+        <Link to="/" className="flex items-center gap-2">
           <img
-            src={isOnTeal ? "/assets/white.png" : "/assets/logo.png"}
+            src="/assets/white.png"
             alt="Logo"
-            className="w-[150px]"
+            className="w-[150px] h-auto brightness-0 invert"
           />
-        </div>
+        </Link>
 
-        {/* Desktop Links */}
-        <nav className="hidden lg:flex items-center gap-10">
-          {links.map((link) => (
-            <button
-              key={link.label}
-              onClick={() => handleNavigation(link.path)}
-              className={`text-sm font-medium tracking-wide transition-colors ${
-                isOnTeal
-                  ? "text-white hover:text-gray-200"
-                  : "text-[#17ada1] hover:text-[#0e7d74]"
+        {/* Nav Links */}
+        <ul className="flex items-center space-x-10 relative text-white font-medium">
+          <li>
+            <Link
+              to="/"
+              className={`transition-all duration-300 ${
+                isActive("/") ? "text-gray-200" : "hover:text-gray-300"
               }`}
             >
-              {link.label}
-            </button>
-          ))}
-        </nav>
+              Home
+            </Link>
+          </li>
 
-        {/* Hamburger for Mobile */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden flex flex-col gap-1"
-        >
-          {[...Array(3)].map((_, i) => (
-            <span
-              key={i}
-              className={`w-6 h-0.5 transition-colors ${
-                isOnTeal ? "bg-white" : "bg-[#17ada1]"
-              }`}
-            />
-          ))}
-        </button>
-      </motion.header>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.4 }}
-            className="fixed top-0 right-0 bottom-0 w-3/4 bg-gradient-to-br from-[#1eb7a9] to-[#91d6c8] text-white 
-            flex flex-col items-center justify-center gap-6 z-40"
+          {/* SERVICES DROPDOWN */}
+          <li
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            {links.map((link) => (
-              <button
-                key={link.label}
-                onClick={() => handleNavigation(link.path)}
-                className="text-lg font-medium text-white hover:text-gray-200 transition-colors"
+            <div
+              className={`flex items-center space-x-1 cursor-pointer transition-all duration-300 ${
+                location.pathname.startsWith("/services")
+                  ? "text-gray-200"
+                  : "hover:text-gray-300"
+              }`}
+            >
+              <span>Services</span>
+              <ChevronDown size={18} />
+            </div>
+
+            {/* Dropdown */}
+            {hovered && (
+              <ul
+                className="absolute left-1/2 top-full mt-3 w-[320px]
+                -translate-x-1/2 bg-white text-gray-800 shadow-xl border rounded-xl py-3
+                max-h-[500px] overflow-y-auto text-center"
               >
-                {link.label}
-              </button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+                {services.map((service, index) => (
+                  <li key={index}>
+                    <Link
+                      to={service.path}
+                      className={`block px-4 py-2 text-sm transition-colors ${
+                        isActive(service.path)
+                          ? "bg-[#17ada1] text-white"
+                          : "hover:bg-gray-100"
+                      }`}
+                    >
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          {/* OTHER LINKS */}
+          <li>
+            <Link
+              to="/about-us"
+              className={`transition-all duration-300 ${
+                isActive("/about-us") ? "text-gray-200" : "hover:text-gray-300"
+              }`}
+            >
+              About Us
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/contact-us"
+              className={`transition-all duration-300 ${
+                isActive("/contact-us") ? "text-gray-200" : "hover:text-gray-300"
+              }`}
+            >
+              Contact Us
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
