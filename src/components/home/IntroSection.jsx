@@ -14,7 +14,7 @@ const IntroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-[#17ada1]/40" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 py-20 max-w-3xl">
+      <div className="relative mt-20 z-10 flex flex-col justify-center h-full px-6 md:px-16 py-20 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

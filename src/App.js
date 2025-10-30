@@ -4,11 +4,16 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 // import Services from "./pages/services/Services"; // main service router
-import DefenceAgainstMedicalNegligence from "./pages/services/DefenceOfNegligence";
-import DueDiligenceAndValuation from "./pages/services/DueDiligenceAndValuation";
-import LaborLawCompliance from "./pages/services/LaborLawCompliance";
-import HealthcareFacilities from "./pages/services/HealthcareFacilities";
+import DefenceAgainstMedicalNegligence from "./components/services/DefenceOfNegligence";
+import DueDiligenceAndValuation from "./components/services/DueDiligenceAndValuation";
+import LaborLawCompliance from "./components/services/LaborLawCompliance";
+import HealthcareFacilities from "./components/services/HealthcareFacilities";
 import Footer from "./components/footer";
+import ServicesSection from "./pages/Services";
+import IntellectualPropertyPage from "./components/services/IntellectualPropertyProtection";
+import ComplianceManagementPage from "./components/services/ComplianceManagement";
+import LicensesRenewalsPage from "./components/services/LicensesAndRenewals";
+import AccountingServicesPage from "./components/services/AccountingServices";
 
 function App() {
   return (
@@ -18,10 +23,16 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/services" element={<ServicesSection/>}/>
         <Route path="/services/defence-of-medical-negligence-claims" element={<DefenceAgainstMedicalNegligence />} /> 
         <Route path="/services/labor-law-compliance" element={<LaborLawCompliance />} /> 
         <Route path="/services/due-diligence-and-valuation" element={<DueDiligenceAndValuation />} /> 
-        <Route path="/services/healthcare-facilities" element={<HealthcareFacilities/>}/>
+        <Route path="/services/design-and-construction-of-healthcare-facilities" element={<HealthcareFacilities/>}/>
+        <Route path="/services/intellectual-property-protection" element={<IntellectualPropertyPage/>} />
+        <Route path="/services/compliance-management" element={<ComplianceManagementPage/>} />
+        <Route path="/services/licenses-and-renewals" element={<LicensesRenewalsPage/>} />
+        <Route path="/services/healthcare-startup-advisory" element={<HealthcareFacilities/>}/>
+        <Route path="/services/accounting-services" element={<AccountingServicesPage/>}/>
       </Routes>
       <Footer/>
     </Router>
