@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
@@ -17,11 +17,10 @@ const services = [
 
 const Navigation = () => {
   const [hovered, setHovered] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
-
-  // Small delay for smoother hide effect
   let hideTimeout;
 
   const handleMouseEnter = () => {
@@ -33,25 +32,37 @@ const Navigation = () => {
     hideTimeout = setTimeout(() => setHovered(false), 150);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "bg-white/90 shadow-md backdrop-blur-sm" : "bg-transparent"
+      }`}
+    >
       <nav className="flex justify-between items-center px-8 py-6">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/assets/white.png"
+            src="/assets/logo.png"
             alt="Logo"
-            className="w-[150px] h-auto brightness-0 invert"
+            className={`w-[170px] h-auto transition-all duration-500`}
           />
         </Link>
 
         {/* Nav Links */}
-        <ul className="flex items-center space-x-10 relative text-white font-medium">
+        <ul className="flex items-center space-x-10 relative font-medium transition-colors duration-500">
           <li>
             <Link
               to="/"
               className={`transition-all duration-300 ${
-                isActive("/") ? "text-gray-200" : "hover:text-gray-300"
+                isActive("/") ? "text-[#17ADA1]" : "hover:text-[#3FC6B9] text-[#11897F]"
               }`}
             >
               Home
@@ -67,29 +78,28 @@ const Navigation = () => {
             <div
               className={`flex items-center space-x-1 cursor-pointer transition-all duration-300 ${
                 location.pathname.startsWith("/services")
-                  ? "text-gray-200"
-                  : "hover:text-gray-300"
+                  ? "text-[#17ADA1]"
+                  : "hover:text-[#3FC6B9] text-[#11897F]"
               }`}
             >
               <span>Services</span>
               <ChevronDown size={18} />
             </div>
 
-            {/* Dropdown */}
             {hovered && (
               <ul
                 className="absolute left-1/2 top-full mt-3 w-[320px]
-                -translate-x-1/2 bg-white text-gray-800 shadow-xl border rounded-xl py-3
+                -translate-x-1/2 bg-white shadow-xl border rounded-xl py-3
                 max-h-[500px] overflow-y-auto text-center"
               >
                 {services.map((service, index) => (
                   <li key={index}>
                     <Link
                       to={service.path}
-                      className={`block px-4 py-2 text-sm transition-colors ${
+                      className={`block px-4 py-2 text-sm transition-colors duration-200 ${
                         isActive(service.path)
-                          ? "bg-[#17ada1] text-white"
-                          : "hover:bg-gray-100"
+                          ? "bg-[#17ADA1] text-white"
+                          : "text-[#11897F] hover:bg-gray-100 hover:text-[#17ADA1]"
                       }`}
                     >
                       {service.name}
@@ -105,7 +115,9 @@ const Navigation = () => {
             <Link
               to="/about-us"
               className={`transition-all duration-300 ${
-                isActive("/about-us") ? "text-gray-200" : "hover:text-gray-300"
+                isActive("/about-us")
+                  ? "text-[#17ADA1]"
+                  : "hover:text-[#3FC6B9] text-[#11897F]"
               }`}
             >
               About Us
@@ -116,7 +128,9 @@ const Navigation = () => {
             <Link
               to="/contact-us"
               className={`transition-all duration-300 ${
-                isActive("/contact-us") ? "text-gray-200" : "hover:text-gray-300"
+                isActive("/contact-us")
+                  ? "text-[#17ADA1]"
+                  : "hover:text-[#3FC6B9] text-[#11897F]"
               }`}
             >
               Contact Us

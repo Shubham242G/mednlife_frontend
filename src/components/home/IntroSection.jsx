@@ -1,16 +1,17 @@
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const IntroSection = () => {
   return (
     <section
       data-theme="teal"
-      className="relative w-full h-screen bg-cover bg-center text-white overflow-hidden"
+      className="relative w-full min-h-screen bg-cover bg-center text-[#17ADA1] overflow-hidden"
       style={{
-        backgroundImage: "url('/images/intro-bg.jpg')",
+        backgroundImage: "url('/assets/Stethescope.png')",
       }}
     >
-      {/* Gradient Overlay — matches LegacyPage exactly */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#17ada1]/95 via-[#17ada1]/85 to-transparent" />
+      {/* EXACT Gradient Overlay from Your OurPeople section */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-[#17ada1]/40" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 py-20 max-w-3xl">
@@ -19,15 +20,15 @@ const IntroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-white/80 text-sm md:text-base font-light tracking-[0.3em] mb-6 uppercase">
+          <p className="text-[#3FC6B9] text-sm md:text-base font-light tracking-[0.3em] mb-6 uppercase">
             Medical Law Excellence
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-light leading-tight mb-8">
+          <h1 className="text-4xl md:text-6xl font-light leading-tight mb-8 text-[#17ADA1]">
             Bridging healthcare and legal expertise
           </h1>
 
-          <p className="text-white/90 text-base md:text-lg font-light leading-relaxed mb-12">
+          <p className="text-[#11897F] text-base md:text-lg font-light leading-relaxed mb-12">
             We provide comprehensive legal solutions for healthcare professionals, hospitals,
             and medical institutions. Our expertise spans medical malpractice defense,
             regulatory compliance, healthcare contracts, and institutional governance with
@@ -39,7 +40,7 @@ const IntroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-white text-white font-light tracking-wider hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3"
+              className="px-8 py-4 border-2 border-white text-[#A8E7E0] font-light tracking-wider hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3"
             >
               EXPLORE OUR SERVICES
               <svg
@@ -57,7 +58,7 @@ const IntroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-white text-white font-light tracking-wider hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3"
+              className="px-8 py-4 border-2 border-white text-[#A8E7E0] font-light tracking-wider hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3"
             >
               SCHEDULE CONSULTATION
               <svg
@@ -80,7 +81,7 @@ const IntroSection = () => {
         </div>
       </div>
 
-      {/* Transparent Big Text Overlay (like LegacyPage aesthetic) */}
+      {/* Large faint overlay text */}
       <div className="absolute inset-0 flex items-center justify-end pr-12 md:pr-32 pointer-events-none">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}

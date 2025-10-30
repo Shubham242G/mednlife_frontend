@@ -8,6 +8,7 @@ import DefenceAgainstMedicalNegligence from "./pages/services/DefenceOfNegligenc
 import DueDiligenceAndValuation from "./pages/services/DueDiligenceAndValuation";
 import LaborLawCompliance from "./pages/services/LaborLawCompliance";
 import HealthcareFacilities from "./pages/services/HealthcareFacilities";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/services/due-diligence-and-valuation" element={<DueDiligenceAndValuation />} /> 
         <Route path="/services/healthcare-facilities" element={<HealthcareFacilities/>}/>
       </Routes>
+      <Footer/>
     </Router>
   );
 }
