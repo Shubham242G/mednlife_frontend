@@ -7,7 +7,7 @@ const LegacyPage = () => {
       data-theme="teal"
       className="relative w-full min-h-screen bg-cover bg-center text-[#17ADA1] overflow-hidden"
       style={{
-        backgroundImage: "url('/images/legacy-bg.jpg')",
+        backgroundImage: "url('/assets/Stethescope.png')",
       }}
     >
       {/* Same Gradient Overlay as IntroSection */}

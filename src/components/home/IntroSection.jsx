@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 const IntroSection = () => {
   return (
-    
+
     <section
       data-theme="teal"
       className="relative w-full min-h-screen bg-cover bg-center text-[#17ADA1] overflow-hidden"
       style={{
-        backgroundImage: "url('/assets/Stethescope.png')",
+        backgroundImage: "url('/assets/banner2.png')",
       }}
     >
       {/* EXACT Gradient Overlay from Your OurPeople section */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/50 to-[#17ada1]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-[#17ada1]/40" />
 
       {/* Content */}
       <div className="relative mt-20 z-10 flex flex-col justify-center h-full px-6 md:px-16 py-20 max-w-3xl">
@@ -30,12 +30,27 @@ const IntroSection = () => {
             Bridging healthcare and legal expertise
           </h1>
 
-          <p className="text-[#11897F] text-base md:text-lg font-light leading-relaxed mb-12">
+          <p className="text-[#11897F] text-base md:text-lg font-normal leading-loose tracking-wide mb-12 max-w-4xl">
             We provide comprehensive legal solutions for healthcare professionals, hospitals,
             and medical institutions. Our expertise spans medical malpractice defense,
             regulatory compliance, healthcare contracts, and institutional governance with
-            over two decades of specialized experience.  <Link>Learn more</Link>
+            over two decades of specialized experience.{' '}
+            <Link
+              to="/about"
+              className="inline-flex items-center text-sm font-semibold text-black hover:text-[#0d9488] underline underline-offset-4 hover:underline-offset-2 transition-all duration-300 group"
+            >
+              <svg
+                className="w-3.5 h-3.5 mr-1.5 group-hover:translate-x-0.5 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              </svg>
+              Learn more
+            </Link>
           </p>
+
 
 
           {/* Buttons */}

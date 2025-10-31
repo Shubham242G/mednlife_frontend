@@ -14,26 +14,28 @@ import IntellectualPropertyPage from "./components/services/IntellectualProperty
 import ComplianceManagementPage from "./components/services/ComplianceManagement";
 import LicensesRenewalsPage from "./components/services/LicensesAndRenewals";
 import AccountingServicesPage from "./components/services/AccountingServices";
+import ChatBot from "./components/bot/bot";
 
 function App() {
   return (
     <Router>
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/services" element={<ServicesSection/>}/>
-        <Route path="/services/defence-of-medical-negligence-claims" element={<DefenceAgainstMedicalNegligence />} /> 
-        <Route path="/services/labor-law-compliance" element={<LaborLawCompliance />} /> 
-        <Route path="/services/due-diligence-and-valuation" element={<DueDiligenceAndValuation />} /> 
-        <Route path="/services/design-and-construction-of-healthcare-facilities" element={<HealthcareFacilities/>}/>
-        <Route path="/services/intellectual-property-protection" element={<IntellectualPropertyPage/>} />
-        <Route path="/services/compliance-management" element={<ComplianceManagementPage/>} />
-        <Route path="/services/licenses-and-renewals" element={<LicensesRenewalsPage/>} />
-        <Route path="/services/healthcare-startup-advisory" element={<HealthcareFacilities/>}/>
-        <Route path="/services/accounting-services" element={<AccountingServicesPage/>}/>
-      </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/services" element={<ServicesSection/>}/>
+            <Route path="/services/defence-of-medical-negligence-claims" element={<DefenceAgainstMedicalNegligence />} /> 
+            <Route path="/services/labor-law-compliance" element={<LaborLawCompliance />} /> 
+            <Route path="/services/due-diligence-and-valuation" element={<DueDiligenceAndValuation />} /> 
+            <Route path="/services/design-and-construction-of-healthcare-facilities" element={<HealthcareFacilities/>}/>
+            <Route path="/services/intellectual-property-protection" element={<IntellectualPropertyPage/>} />
+            <Route path="/services/compliance-management" element={<ComplianceManagementPage/>} />
+            <Route path="/services/licenses-and-renewals" element={<LicensesRenewalsPage/>} />
+            <Route path="/services/healthcare-startup-advisory" element={<HealthcareFacilities/>}/>
+            <Route path="/services/accounting-services" element={<AccountingServicesPage/>}/>
+          </Routes>
+        <ChatBot/>
       <Footer/>
     </Router>
   );
