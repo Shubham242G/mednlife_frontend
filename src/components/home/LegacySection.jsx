@@ -11,7 +11,7 @@ const LegacyPage = () => {
       }}
     >
       {/* Same Gradient Overlay as IntroSection */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-[#17ada1]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/70 to-[#17ada1]/50" />
 
       {/* Content Section */}
       <div className="relative z-10 flex flex-col justify-center min-h-screen px-6 md:px-16 py-20 max-w-4xl">
