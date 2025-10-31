@@ -25,18 +25,18 @@ const Navigation = () => {
         isScrolled ? "bg-white/90 shadow-md backdrop-blur-sm" : "bg-transparent"
       }`}
     >
-      <nav className="flex justify-between items-center px-8 py-6">
+      <nav className="flex items-center px-8 py-6">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
             src="/assets/logo.png"
             alt="Logo"
-            className={`w-[170px] h-auto transition-all duration-500`}
+            className={`w-[190px] h-auto transition-all duration-500`}
           />
         </Link>
 
         {/* Nav Links */}
-        <ul className="flex items-center space-x-10 relative font-medium transition-colors duration-500">
+        <ul className="flex items-center space-x-10 ml-[350px] font-medium transition-colors duration-500">
           {/* SERVICES DROPDOWN */}
           <li>
             <Link

@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const IntroSection = () => {
   return (
+    
     <section
       data-theme="teal"
       className="relative w-full min-h-screen bg-cover bg-center text-[#17ADA1] overflow-hidden"
@@ -11,7 +13,7 @@ const IntroSection = () => {
       }}
     >
       {/* EXACT Gradient Overlay from Your OurPeople section */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-[#17ada1]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/50 to-[#17ada1]/40" />
 
       {/* Content */}
       <div className="relative mt-20 z-10 flex flex-col justify-center h-full px-6 md:px-16 py-20 max-w-3xl">
@@ -32,35 +34,18 @@ const IntroSection = () => {
             We provide comprehensive legal solutions for healthcare professionals, hospitals,
             and medical institutions. Our expertise spans medical malpractice defense,
             regulatory compliance, healthcare contracts, and institutional governance with
-            over two decades of specialized experience.
+            over two decades of specialized experience.  <Link>Learn more</Link>
           </p>
+
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 md:gap-6">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-white text-[#A8E7E0] font-light tracking-wider hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3"
+              className="px-8 py-4 border-2 border-white text-[#008000] font-light tracking-wider hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3"
             >
               EXPLORE OUR SERVICES
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </motion.button>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-white text-[#A8E7E0] font-light tracking-wider hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3"
-            >
-              SCHEDULE CONSULTATION
               <svg
                 width="20"
                 height="20"
@@ -79,18 +64,6 @@ const IntroSection = () => {
         <div className="absolute bottom-8 left-8">
           <p className="text-white/50 text-xs tracking-wider">© medNlaw 2025</p>
         </div>
-      </div>
-
-      {/* Large faint overlay text */}
-      <div className="absolute inset-0 flex items-center justify-end pr-12 md:pr-32 pointer-events-none">
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="text-white/10 text-[8rem] md:text-[16rem] font-bold select-none"
-        >
-          medNlaw
-        </motion.div>
       </div>
     </section>
   );

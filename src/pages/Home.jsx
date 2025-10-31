@@ -4,6 +4,7 @@ import ExpertiseSection from '../components/home/ExpertiseSection';
 import LegacySection from '../components/home/LegacySection';
 import PeopleSection from '../components/home/PeopleSection'
 import ThoughtLeadershipSection from '../components/home/ThoughtLeadershipSection'
+import ContactForm from '../components/home/Contact';
 function Home() {
   return (
     <div className="min-h-screen bg-[#f5f1ed]">
@@ -21,6 +22,9 @@ function Home() {
   </section>
   <section className="bg-[#17ada1] min-h-screen">
     <ThoughtLeadershipSection />
+  </section>
+  <section className="bg-white min-h-screen">
+    <ContactForm />
   </section>
 </div>
   );
