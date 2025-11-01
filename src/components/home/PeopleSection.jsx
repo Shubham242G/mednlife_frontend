@@ -18,8 +18,8 @@ const PeopleSection = () => {
         }}
       />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#17ada1] via-[#17ada1]/80 to-white/40" />
+      {/* STRONGER Gradient Overlay for better text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#17ada1]/90 via-[#17ada1]/75 to-black/50" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center w-full px-6 md:px-16 py-20">
@@ -30,15 +30,15 @@ const PeopleSection = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <p className="text-white/80 text-sm md:text-base font-light tracking-[0.3em] mb-6 uppercase">
+            <p className="text-white text-sm md:text-base font-semibold tracking-[0.3em] mb-6 uppercase">
               Our People
             </p>
 
-            <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight mb-8">
+            <h1 className="text-white text-5xl md:text-7xl font-bold leading-tight mb-8 drop-shadow-lg">
               Experienced medical law advocates
             </h1>
 
-            <p className="text-white/90 text-base md:text-lg font-normal leading-relaxed mb-12 max-w-3xl">
+            <p className="text-white/95 text-base md:text-lg font-normal leading-loose tracking-wide mb-12 max-w-3xl drop-shadow">
               Our team comprises highly qualified legal professionals with specialized
               expertise in medical and healthcare law. Each attorney brings decades of
               combined experience representing doctors, surgeons, hospitals,
@@ -51,7 +51,7 @@ const PeopleSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-semibold tracking-wider rounded-lg hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3 text-sm"
+                className="px-8 py-4 bg-white text-[#17ada1] font-bold tracking-wider rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 MEET OUR TEAM
                 <svg
@@ -69,7 +69,7 @@ const PeopleSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-semibold tracking-wider rounded-lg hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3 text-sm"
+                className="px-8 py-4 border-2 border-white text-white font-bold tracking-wider rounded-lg hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3 text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 VIEW CREDENTIALS
                 <svg

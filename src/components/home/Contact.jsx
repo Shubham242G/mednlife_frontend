@@ -24,31 +24,29 @@ const ContactForm = () => {
 
   return (
     <div className="w-full min-h-screen flex justify-center items-center px-5 py-16 bg-gradient-to-r from-[#17ada1] via-[#17ada1]/80 to-white/95">
-        {/* Gradient Overlay — white fading to teal (right side) */}
-      <div className="absolute inset-0" />
-      <div className="max-w-4xl w-full bg-white/98 rounded-xl shadow-2xl p-12 md:p-16">
+      <div className="max-w-4xl w-full bg-white rounded-2xl shadow-2xl p-12 md:p-16">
         {/* Header Section */}
-        <div className="text-center mb-10">
-          <h2 className="text-white text-sm font-semibold tracking-[3px] mb-4">
-            GET IN TOUCH
-          </h2>
-          <h1 className="text-cyan-600 text-4xl md:text-5xl font-light mb-5 leading-tight">
+        <div className="text-center mb-12">
+          <span className="inline-block text-[#17ada1] text-xs font-bold tracking-[0.3em] uppercase mb-4">
+            Contact MediLaw
+          </span>
+          <h1 className="text-[#17ada1] text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Let's discuss your healthcare legal needs
           </h1>
-          <p className="text-slate-600 text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base leading-relaxed max-w-3xl mx-auto">
             Our team is ready to provide expert guidance on medical law matters. 
             Fill out the form below and we'll get back to you shortly.
           </p>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="mt-10">
+        <form onSubmit={handleSubmit} className="mt-12">
           {/* Row 1: Name and Email */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="flex flex-col">
               <label 
                 htmlFor="name" 
-                className="text-slate-700 text-sm font-semibold mb-2 tracking-wide"
+                className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
               >
                 Full Name *
               </label>
@@ -60,16 +58,16 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="Your full name"
                 required
-                className="px-4 py-3.5 border-2 border-gray-300 rounded-lg text-base text-slate-700 
-                focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 
-                transition-all duration-300 placeholder:text-gray-400"
+                className="px-5 py-3.5 border-2 border-gray-300 rounded-lg text-base text-gray-900 
+                focus:outline-none focus:border-[#17ada1] focus:ring-2 focus:ring-teal-200 
+                transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400"
               />
             </div>
 
             <div className="flex flex-col">
               <label 
                 htmlFor="email" 
-                className="text-slate-700 text-sm font-semibold mb-2 tracking-wide"
+                className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
               >
                 Email Address *
               </label>
@@ -81,9 +79,9 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="your.email@example.com"
                 required
-                className="px-4 py-3.5 border-2 border-gray-300 rounded-lg text-base text-slate-700 
-                focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 
-                transition-all duration-300 placeholder:text-gray-400"
+                className="px-5 py-3.5 border-2 border-gray-300 rounded-lg text-base text-gray-900 
+                focus:outline-none focus:border-[#17ada1] focus:ring-2 focus:ring-teal-200 
+                transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400"
               />
             </div>
           </div>
@@ -93,7 +91,7 @@ const ContactForm = () => {
             <div className="flex flex-col">
               <label 
                 htmlFor="phone" 
-                className="text-slate-700 text-sm font-semibold mb-2 tracking-wide"
+                className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
               >
                 Phone Number
               </label>
@@ -104,16 +102,16 @@ const ContactForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+91 XXXXX XXXXX"
-                className="px-4 py-3.5 border-2 border-gray-300 rounded-lg text-base text-slate-700 
-                focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 
-                transition-all duration-300 placeholder:text-gray-400"
+                className="px-5 py-3.5 border-2 border-gray-300 rounded-lg text-base text-gray-900 
+                focus:outline-none focus:border-[#17ada1] focus:ring-2 focus:ring-teal-200 
+                transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400"
               />
             </div>
 
             <div className="flex flex-col">
               <label 
                 htmlFor="subject" 
-                className="text-slate-700 text-sm font-semibold mb-2 tracking-wide"
+                className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
               >
                 Subject *
               </label>
@@ -125,9 +123,9 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="What can we help you with?"
                 required
-                className="px-4 py-3.5 border-2 border-gray-300 rounded-lg text-base text-slate-700 
-                focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 
-                transition-all duration-300 placeholder:text-gray-400"
+                className="px-5 py-3.5 border-2 border-gray-300 rounded-lg text-base text-gray-900 
+                focus:outline-none focus:border-[#17ada1] focus:ring-2 focus:ring-teal-200 
+                transition-all duration-300 placeholder:text-gray-400 hover:border-gray-400"
               />
             </div>
           </div>
@@ -136,7 +134,7 @@ const ContactForm = () => {
           <div className="flex flex-col mb-8">
             <label 
               htmlFor="message" 
-              className="text-slate-700 text-sm font-semibold mb-2 tracking-wide"
+              className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
             >
               Message *
             </label>
@@ -148,26 +146,38 @@ const ContactForm = () => {
               placeholder="Tell us more about your inquiry..."
               rows="6"
               required
-              className="px-4 py-3.5 border-2 border-gray-300 rounded-lg text-base text-slate-700 
-              focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-200 
-              transition-all duration-300 resize-none placeholder:text-gray-400"
+              className="px-5 py-3.5 border-2 border-gray-300 rounded-lg text-base text-gray-900 
+              focus:outline-none focus:border-[#17ada1] focus:ring-2 focus:ring-teal-200 
+              transition-all duration-300 resize-none placeholder:text-gray-400 hover:border-gray-400"
             ></textarea>
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full md:w-auto px-10 py-4 bg-gradient-to-r from-cyan-400 to-cyan-600 
-            text-white font-semibold text-sm tracking-wider rounded-lg 
-            hover:from-cyan-500 hover:to-cyan-700 hover:shadow-lg 
-            transform hover:-translate-y-0.5 transition-all duration-300 
-            flex items-center justify-center gap-3 group"
+            className="w-full md:w-auto px-12 py-4 bg-[#0f766e] hover:bg-[#0d9488] 
+            text-white font-bold text-sm tracking-wider rounded-lg 
+            hover:shadow-lg transform hover:-translate-y-0.5 
+            transition-all duration-300 flex items-center justify-center gap-3 group"
           >
+            <svg 
+              className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform duration-300" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
             SEND MESSAGE
-            <span className="text-xl group-hover:translate-x-1 transition-transform duration-300">
+            <span className="text-lg group-hover:translate-x-1 transition-transform duration-300">
               →
             </span>
           </button>
+
+          {/* Form Note */}
+          <p className="text-gray-500 text-xs mt-6 text-center">
+            We typically respond within 24 hours. For urgent matters, call us directly at +91 98765 43210
+          </p>
         </form>
       </div>
     </div>
