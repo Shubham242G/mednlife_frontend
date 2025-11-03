@@ -1,92 +1,203 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const IntroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      image: "/assets/banner1.png",
+      title: "Life is waiting. Let's start your next chapter",
+      subtitle: "Comprehensive Care and Support for Mental Health and Substance Abuse",
+    },
+    {
+      id: 2,
+      image: "/assets/banner2.png",
+      title: " Protecting Doctors, and Hospitals.",
+      subtitle: "Total Compliance for Indian Healthcare.",
+    },
+    {
+      id: 3,
+      image: "/assets/doctor-and-patients.jpg",
+      title: "From PCPNDT compliance to Clinical Trials.",
+      subtitle: "We Decipher India’s Healthcare Regulations for You",
+    },
+    {
+      id: 4,
+      image: "/assets/Stethescope.png",
+      title: "Renew. Comply. Operate. ",
+      subtitle: "Your Trusted License Renewal Partner.",
+    },
+    {
+      id: 5,
+      image: "/assets/banner5.png",
+      title: "Medical Negligence Defense.",
+      subtitle: "Specialized in Indian Healthcare Law.",
+    },
+  ];
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const goToPrevious = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+      scale: 0.95,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+    },
+    exit: (direction) => ({
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+      scale: 0.95,
+    }),
+  };
+
+  const textVariants = {
+    enter: {
+      y: 50,
+      opacity: 0,
+    },
+    center: {
+      y: 0,
+      opacity: 1,
+    },
+    exit: {
+      y: -50,
+      opacity: 0,
+    },
+  };
+
   return (
-    <section
-      data-theme="teal"
-      className="relative w-full min-h-screen text-white overflow-hidden flex flex-col justify-center"
-    >
-      {/* Background Image - Fixed positioning */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/assets/banner2.png')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-        }}
-      />
+    <section className="relative w-full h-screen text-white overflow-hidden">
+      {/* Background Image */}
+      <AnimatePresence initial={false} custom={currentSlide}>
+        <motion.div
+          key={currentSlide}
+          custom={currentSlide}
+          variants={slideVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.5 },
+            scale: { duration: 0.5 },
+          }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('${slides[currentSlide].image}')`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        />
+      </AnimatePresence>
 
-      {/* STRONGER Gradient Overlay for better text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-[#17ada1]/50" />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/50 to-transparent" />
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center w-full px-6 md:px-16 py-20">
-        <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <p className="text-white text-sm md:text-base font-semibold tracking-[0.3em] mb-6 uppercase">
-              Medical Law Excellence
-            </p>
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrevious}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-6 h-6 text-white group-hover:text-[#17ADA1] transition-colors" />
+      </button>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 text-white drop-shadow-lg">
-              Bridging healthcare and legal expertise
-            </h1>
+      <button
+        onClick={goToNext}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-6 h-6 text-white group-hover:text-[#17ADA1] transition-colors" />
+      </button>
 
-            <p className="text-white/95 text-base md:text-lg font-normal leading-loose tracking-wide mb-12 max-w-4xl drop-shadow">
-              We provide comprehensive legal solutions for healthcare professionals, hospitals,
-              and medical institutions. Our expertise spans medical malpractice defense,
-              regulatory compliance, healthcare contracts, and institutional governance with
-              over two decades of specialized experience.{' '}
-              <Link
-                to="/about"
-                className="inline-flex items-center text-sm font-semibold text-white hover:text-yellow-300 underline underline-offset-4 hover:underline-offset-2 transition-all duration-300 group"
+      {/* Content Container - Text at Bottom */}
+      <div className="relative z-10 h-full w-full flex flex-col justify-end">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 w-full pb-12 md:pb-16 lg:pb-20">
+          {/* Bottom Content - Two Column Layout */}
+          <div className="flex items-end gap-6 md:gap-8">
+            {/* Left Column - Main Title (60% width) */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`title-${currentSlide}`}
+                variants={textVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.5 }}
+                className="w-3/5 flex-shrink-0"
               >
-                <svg
-                  className="w-3.5 h-3.5 mr-1.5 group-hover:translate-x-0.5 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                <h1
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif leading-tight tracking-tight break-words"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-                Learn more
-              </Link>
-            </p>
+                  {slides[currentSlide].title}
+                </h1>
+              </motion.div>
+            </AnimatePresence>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4 md:gap-6">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-[#17ADA1] hover:bg-[#0d9488] text-white font-bold tracking-wider rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                EXPLORE OUR SERVICES
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
+            {/* Divider Line */}
+            <div className="w-1 h-20 md:h-24 bg-white flex-shrink-0" />
+
+            {/* Right Column - Subtitle + CTA (30% width) */}
+            <div className="w-2/5 flex-shrink-0 flex flex-col justify-end space-y-4">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`subtitle-${currentSlide}`}
+                  variants={textVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </motion.button>
+                  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-light leading-snug text-white/95 break-words">
+                    {slides[currentSlide].subtitle}
+                  </h2>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="relative w-fit"
+              >
+                {/* Glow effect */}
+                <div className="absolute -inset-2 bg-[#17ADA1] rounded-lg blur-xl opacity-40 animate-pulse" />
+
+                <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
+                  Get Started Today
+                </button>
+              </motion.div>
             </div>
-          </motion.div>
-
-          {/* Copyright */}
-          <div className="absolute bottom-8 left-8">
-            <p className="text-white/70 text-xs tracking-wider font-medium">© MediLaw 2025</p>
           </div>
         </div>
       </div>
+
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
     </section>
   );
 };

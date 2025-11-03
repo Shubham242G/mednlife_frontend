@@ -3,89 +3,51 @@ import { motion } from "framer-motion";
 
 const PeopleSection = () => {
   return (
-    <section
-      data-theme="light"
-      className="relative w-full min-h-screen text-white overflow-hidden flex flex-col justify-center"
-    >
-      {/* Background Image - Fixed positioning */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/assets/doctor-and-patients.jpg')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-        }}
-      />
+    <section className="w-full bg-teal-50 flex justify-center items-center m-0 p-0 overflow-hidden">
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center py-20 px-6 md:px-12 lg:px-16">
+        {/* Left Side: Image */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="w-full rounded-2xl overflow-hidden shadow-xl"
+        >
+          <img
+            src="/assets/the_team.jpg"
+            alt="People"
+            className="w-full h-auto object-cover rounded-2xl"
+          />
+        </motion.div>
 
-      {/* STRONGER Gradient Overlay for better text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#17ada1]/90 via-[#17ada1]/75 to-black/50" />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center w-full px-6 md:px-16 py-20">
-        <div className="max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+        {/* Right Side: Text */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-gray-900"
+        >
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            <p className="text-white text-sm md:text-base font-semibold tracking-[0.3em] mb-6 uppercase">
-              Our People
-            </p>
+            Healthcare Law Specialists
+          </h2>
 
-            <h1 className="text-white text-5xl md:text-7xl font-bold leading-tight mb-8 drop-shadow-lg">
-              Experienced medical law advocates
-            </h1>
+          <p className="text-gray-700 mb-6 text-lg font-medium">
+            We are here for you
+          </p>
 
-            <p className="text-white/95 text-base md:text-lg font-normal leading-loose tracking-wide mb-12 max-w-3xl drop-shadow">
-              Our team comprises highly qualified legal professionals with specialized
-              expertise in medical and healthcare law. Each attorney brings decades of
-              combined experience representing doctors, surgeons, hospitals,
-              pharmaceutical companies, and healthcare organizations in complex legal
-              matters.
-            </p>
+          <p className="text-gray-800 leading-relaxed text-base md:text-[17px] border-t border-gray-300 pt-4">
+            Whether you need guidance in navigating healthcare compliance or
+            steering clear from legal complexities, our experienced
+            medico-legal experts will provide end-to-end support, offering you
+            the peace of mind you deserve.
+          </p>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4 md:gap-6">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-[#17ada1] font-bold tracking-wider rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                MEET OUR TEAM
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-bold tracking-wider rounded-lg hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3 text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                VIEW CREDENTIALS
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
+          <div className="mt-8 h-1.5 w-28 bg-gradient-to-r from-[#0E6F69] to-[#17ADA1] rounded-full" />
+        </motion.div>
       </div>
     </section>
   );

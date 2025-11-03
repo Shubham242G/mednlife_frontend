@@ -1,32 +1,38 @@
-import React from 'react';
-import IntroSection from '../components/home/IntroSection'
-import ExpertiseSection from '../components/home/ExpertiseSection';
-import LegacySection from '../components/home/LegacySection';
-import PeopleSection from '../components/home/PeopleSection'
-import ThoughtLeadershipSection from '../components/home/ThoughtLeadershipSection'
-import ContactForm from '../components/home/Contact';
+import React from "react";
+import IntroSection from "../components/home/IntroSection";
+import ExpertiseSection from "../components/home/ExpertiseSection";
+import PeopleSection from "../components/home/PeopleSection";
+import ThoughtLeadershipSection from "../components/home/ThoughtLeadershipSection";
+import ContactForm from "../components/home/Contact";
+
 function Home() {
   return (
-    <div className="min-h-screen bg-[#f5f1ed]">
-  <section className="bg-[#17ada1] min-h-screen">
-    <IntroSection />
-  </section>
-  <section className="bg-white min-h-screen">
-    <ExpertiseSection />
-  </section>
-  <section className="bg-[#f5f1ed] min-h-screen">
-    <LegacySection />
-  </section>
-  <section className="bg-white min-h-screen">
-    <PeopleSection />
-  </section>
-  <section className="bg-[#17ada1] min-h-screen">
-    <ThoughtLeadershipSection />
-  </section>
-  <section className="bg-white min-h-screen">
-    <ContactForm />
-  </section>
-</div>
+    <div className="bg-[#f5f1ed]">
+      {/* Intro Section */}
+      <section className="bg-[#17ada1]">
+        <IntroSection />
+      </section>
+
+      {/* Expertise Section */}
+      <section className="bg-teal-200">
+        <ExpertiseSection />
+      </section>
+
+      {/* People Section */}
+      <section className="bg-teal-200">
+        <PeopleSection />
+      </section>
+
+      {/* Thought Leadership Section */}
+      <section className="bg-teal-200">
+        <ThoughtLeadershipSection />
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-teal-200">
+        <ContactForm />
+      </section>
+    </div>
   );
 }
 

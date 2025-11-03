@@ -19,12 +19,12 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Add your form submission logic here
   };
 
   return (
-    <div className="w-full min-h-screen flex justify-center items-center px-5 py-16 bg-gradient-to-r from-[#17ada1] via-[#17ada1]/80 to-white/95">
+    <div className="w-full min-h-screen flex justify-center items-center px-5 py-20 bg-teal-50">
       <div className="max-w-4xl w-full bg-white rounded-2xl shadow-2xl p-12 md:p-16">
+        
         {/* Header Section */}
         <div className="text-center mb-12">
           <span className="inline-block text-[#17ada1] text-xs font-bold tracking-[0.3em] uppercase mb-4">
@@ -34,7 +34,7 @@ const ContactForm = () => {
             Let's discuss your healthcare legal needs
           </h1>
           <p className="text-gray-600 text-base leading-relaxed max-w-3xl mx-auto">
-            Our team is ready to provide expert guidance on medical law matters. 
+            Our team is ready to provide expert guidance on medical law matters.
             Fill out the form below and we'll get back to you shortly.
           </p>
         </div>
@@ -44,10 +44,7 @@ const ContactForm = () => {
           {/* Row 1: Name and Email */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="flex flex-col">
-              <label 
-                htmlFor="name" 
-                className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
-              >
+              <label htmlFor="name" className="text-gray-900 text-sm font-bold mb-3 tracking-wide">
                 Full Name *
               </label>
               <input
@@ -65,10 +62,7 @@ const ContactForm = () => {
             </div>
 
             <div className="flex flex-col">
-              <label 
-                htmlFor="email" 
-                className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
-              >
+              <label htmlFor="email" className="text-gray-900 text-sm font-bold mb-3 tracking-wide">
                 Email Address *
               </label>
               <input
@@ -89,10 +83,7 @@ const ContactForm = () => {
           {/* Row 2: Phone and Subject */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="flex flex-col">
-              <label 
-                htmlFor="phone" 
-                className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
-              >
+              <label htmlFor="phone" className="text-gray-900 text-sm font-bold mb-3 tracking-wide">
                 Phone Number
               </label>
               <input
@@ -109,10 +100,7 @@ const ContactForm = () => {
             </div>
 
             <div className="flex flex-col">
-              <label 
-                htmlFor="subject" 
-                className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
-              >
+              <label htmlFor="subject" className="text-gray-900 text-sm font-bold mb-3 tracking-wide">
                 Subject *
               </label>
               <input
@@ -132,10 +120,7 @@ const ContactForm = () => {
 
           {/* Message Field */}
           <div className="flex flex-col mb-8">
-            <label 
-              htmlFor="message" 
-              className="text-gray-900 text-sm font-bold mb-3 tracking-wide"
-            >
+            <label htmlFor="message" className="text-gray-900 text-sm font-bold mb-3 tracking-wide">
               Message *
             </label>
             <textarea
@@ -166,7 +151,8 @@ const ContactForm = () => {
               stroke="currentColor" 
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             SEND MESSAGE
             <span className="text-lg group-hover:translate-x-1 transition-transform duration-300">

@@ -1,93 +1,286 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ExpertisePage = () => {
+const ExpertiseSection = () => {
+  const services = [
+    {
+      id: 1,
+      title: "Comprehensive Legal Services",
+      icon: "assets/1st-layout.png",
+      gradient: "from-[#17ADA1] to-[#14968C]",
+      accentColor: "from-yellow-400/20 to-transparent",
+      description:
+        "From strategic planning for healthcare startups to healthcare risk management, we provide end-to-end medical compliance solutions. We always stay ahead of the dynamic healthcare regulations and navigate the legal intricacies with ease.",
+    },
+    {
+      id: 2,
+      title: "Reputation Management",
+      icon: "assets/2nd-layout.png",
+      gradient: "from-[#4ECDC4] to-[#17ADA1]",
+      accentColor: "from-gray-500/20 to-transparent",
+      description:
+        "We don't let legal disputes sabotage your reputation. With our reputation management specialists, you can mitigate legal risks, protect your healthcare brand and ensure your medical practice is regarded as reliable in the industry.",
+    },
+    {
+      id: 3,
+      title: "Strategic Compliance Consulting",
+      icon: "assets/3rd-layout.png",
+      gradient: "from-[#4ECDC4] to-[#17ADA1]",
+      accentColor: "from-cyan-400/20 to-transparent",
+      description:
+        "Our healthcare startup advisory ensures your business isn't entangled in legal complexities. We prepare actionable insights, plans, and strategies to help you navigate the complex regulatory framework.",
+    },
+  ];
+
+  const partners = [
+    { id: 1, icon: "/assets/brand1.png" },
+    { id: 2, icon: "/assets/brand3.png" },
+    { id: 3, icon: "/assets/brand4.png" },
+    { id: 4, icon: "/assets/brand5.png" },
+  ];
+
   return (
-    <section
-      data-theme="light"
-      className="relative w-full min-h-screen text-white overflow-hidden flex flex-col justify-center"
-    >
-      {/* Background Image - Fixed positioning */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/assets/banner1.png')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-        }}
-      />
-
-      {/* STRONGER Gradient Overlay for better text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#17ada1]/90 via-[#17ada1]/75 to-black/50" />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center w-full px-6 md:px-16 py-20">
-        <div className="max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <p className="text-white text-sm md:text-base font-semibold tracking-[0.3em] mb-6 uppercase">
-              Expertise
-            </p>
-
-            <h1 className="text-white text-5xl md:text-7xl font-bold leading-tight mb-8 drop-shadow-lg">
-              Comprehensive medical legal solutions
-            </h1>
-
-            <p className="text-white/95 text-base md:text-lg font-normal leading-loose tracking-wide mb-12 max-w-3xl drop-shadow">
-              Our expertise across diverse medical practice areas and healthcare sectors
-              covers varied and complex legal needs. Backed by extensive experience in
-              medical law, we serve healthcare professionals, hospitals, and medical
-              institutions with specialized legal services tailored to the healthcare
-              industry.
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4 md:gap-6">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-[#17ada1] font-bold tracking-wider rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                EXPLORE PRACTICE AREAS
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-bold tracking-wider rounded-lg hover:bg-white hover:text-[#17ada1] transition-all duration-300 flex items-center gap-3 text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                VIEW FOCUS AREAS
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </motion.button>
-            </div>
-          </motion.div>
+    <div className="w-full bg-teal-50">
+      {/* Section 1: CTA Section */}
+      <section className="w-full min-h-[30vh] flex items-center justify-center px-6 md:px-12 lg:px-16 py-12 md:py-16 relative overflow-hidden">
+        {/* Grid overlay */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <svg className="w-full h-full" viewBox="0 0 1200 400">
+            <defs>
+              <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#17ADA1" strokeWidth="1" />
+              </pattern>
+            </defs>
+            <rect width="1200" height="400" fill="url(#grid1)" />
+          </svg>
         </div>
-      </div>
-    </section>
+
+        <div className="max-w-5xl mx-auto w-full relative z-10">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-12">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="flex-1"
+            >
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
+                className="inline-block text-[#17ADA1] font-semibold text-xs tracking-widest uppercase mb-2"
+              >
+                Protect Your Practice
+              </motion.span>
+
+              <h2
+                className="text-[2.75rem] md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-tight mt-3 mb-6"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                With over 5.2 million medical malpractice cases filed annually in India, proactive legal compliance is your only defense.
+              </h2>
+            </motion.div>
+
+            {/* Divider */}
+            <motion.div
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden lg:block w-1 h-48 origin-top bg-teal-300 flex-shrink-0"
+            ></motion.div>
+
+            {/* Right CTA */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              className="flex-shrink-0 w-full md:w-auto"
+            >
+              <motion.button
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.96 }}
+                className="w-full md:w-auto group relative bg-gradient-to-r from-[#17ADA1] to-[#14968C] text-white px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[#14968C] to-[#0d7c72] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span className="relative">Get Started Today</span>
+              </motion.button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="w-full py-20 md:py-32 relative overflow-hidden">
+        {/* Floating blurs */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity }}
+            className="absolute top-10 left-1/4 w-96 h-96 bg-[#17ADA1]/10 rounded-full blur-3xl"
+          ></motion.div>
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
+            transition={{ duration: 8, repeat: Infinity, delay: 1 }}
+            className="absolute bottom-10 right-1/4 w-80 h-80 bg-[#4ECDC4]/10 rounded-full blur-3xl"
+          ></motion.div>
+        </div>
+
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16 md:mb-24"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="inline-block px-5 py-2.5 bg-[#17ADA1]/10 backdrop-blur-md rounded-full text-[#17ADA1] text-xs font-semibold tracking-widest uppercase mb-6 border border-[#17ADA1]/20 hover:bg-[#17ADA1]/15 transition-colors"
+            >
+              Our Core Competencies
+            </motion.div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+              Expert Solutions for Healthcare Excellence
+            </h2>
+            <p className="text-gray-700 text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
+              Comprehensive legal and strategic expertise tailored for modern healthcare providers
+            </p>
+          </motion.div>
+
+          {/* Cards */}
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                whileHover={{ y: -12 }}
+                className="group relative"
+              >
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
+                ></div>
+
+                <div
+                  className={`relative bg-gradient-to-br ${service.gradient} rounded-2xl p-8 md:p-10 lg:p-12 min-h-[580px] flex flex-col border border-white/20 shadow-2xl group-hover:shadow-3xl transition-all duration-300 backdrop-blur-sm`}
+                >
+                  <div
+                    className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.accentColor} opacity-40`}
+                  ></div>
+
+                  <div className="relative z-10 flex flex-col h-full">
+                    <motion.div
+                      whileHover={{ scale: 1.08, rotate: 2 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      className="mb-8 flex justify-center"
+                    >
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-white/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                        <img
+                          src={service.icon}
+                          alt={service.title}
+                          className="relative w-32 h-32 md:w-36 md:h-36 object-contain drop-shadow-lg"
+                        />
+                      </div>
+                    </motion.div>
+
+                    <div className="mb-6">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                        {service.title}
+                      </h3>
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 48 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.2 + 0.3, duration: 0.6 }}
+                        className="h-1.5 bg-gradient-to-r from-white/60 to-white/20 rounded-full"
+                      ></motion.div>
+                    </div>
+
+                    <p className="text-white/95 leading-relaxed text-base flex-grow mb-6">
+                      {service.description}
+                    </p>
+
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.2 + 0.4, duration: 0.6 }}
+                      className="flex items-center gap-2 text-white/80 text-sm font-medium group-hover:text-white transition-colors"
+                    >
+                      <span>Learn more</span>
+                      <motion.div whileHover={{ x: 4 }} className="w-4 h-4">
+                        →
+                      </motion.div>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="w-full py-16 md:py-24 relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Trusted by Leading Healthcare Providers
+            </h2>
+            <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+              Partnering with industry leaders to deliver excellence
+            </p>
+          </motion.div>
+
+          <div className="relative overflow-hidden">
+            <motion.div
+              className="flex gap-12 md:gap-16 items-center"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                duration: 25,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {[...partners, ...partners].map((partner, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1 }}
+                  className="flex-shrink-0 w-60 h-40 flex items-center justify-center group"
+                >
+                  <div className="relative w-full h-full flex items-center justify-center bg-white rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-[#17ADA1]/30">
+                    <img
+                      src={partner.icon}
+                      alt={`Partner ${partner.id}`}
+                      className="max-h-24 max-w-48 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default ExpertisePage;
+export default ExpertiseSection;
