@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import './bot.css'; // Make sure this CSS file is in the same directory
+import './bot.css';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,62 +11,62 @@ const ChatBot = () => {
   const questions = [
     { id: 1, text: "Hi! What's your name?", type: "text", key: "name" },
     { id: 2, text: "What's your email address?", type: "email", key: "email" },
-    { 
-      id: 3, 
-      text: "How can we help you?", 
-      type: "select", 
-      key: "service", 
-      options: ["Contested Divorce", "Mutual Divorce", "Child Custody", "Dowry Case/Domestic Violence Case", "False Dowry and Domestic Violence Case", "Issue not mentioned"] 
+    {
+      id: 3,
+      text: "How can we help you?",
+      type: "select",
+      key: "service",
+      options: [
+        "Contested Divorce",
+        "Mutual Divorce",
+        "Child Custody",
+        "Dowry Case / Domestic Violence",
+        "False Dowry & DV Case",
+        "Issue not listed"
+      ]
     },
   ];
 
-  // This effect triggers the email sending process once all answers are in.
   useEffect(() => {
-    if (Object.keys(answers).length === questions.length) {
-      sendEmail();
-    }
-  }, [answers, questions.length]);
+    if (Object.keys(answers).length === questions.length) sendEmail();
+  }, [answers]);
 
   const handleAnswer = (answer) => {
-    const currentQ = questions[currentQuestion];
-    const newAnswers = { ...answers, [currentQ.key]: answer };
-    setAnswers(newAnswers);
+    const q = questions[currentQuestion];
+    setAnswers({ ...answers, [q.key]: answer });
 
     if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(prev => prev + 1);
+      setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowWhatsApp(true);
     }
   };
 
   const sendEmail = () => {
-    if (Object.keys(answers).length !== questions.length) return;
-
-    const templateParams = {
-      name: answers.name || "Not provided",
-      email: answers.email || "Not provided",
-      service: answers.service || "Not provided"
-    };
-
     emailjs.send(
-      'service_kranxad', 
-      'template_2gdcgwl', 
-      templateParams, 
+      'service_kranxad',
+      'template_2gdcgwl',
+      {
+        name: answers.name,
+        email: answers.email,
+        service: answers.service
+      },
       'am1VZPuktoi7yeO5J'
-    )
-      .then((response) => {
-        console.log('SUCCESS! Email sent.', response.status, response.text);
-      }, (error) => {
-        console.log('FAILED... Email not sent.', error);
-      });
+    );
+  };
+
+  const goBack = () => {
+    if (showWhatsApp) {
+      setShowWhatsApp(false);
+      setCurrentQuestion(questions.length - 1);
+      return;
+    }
+    if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1);
   };
 
   const handleWhatsAppRedirect = () => {
-    const message = `Hi! I'm interested in your services. Here are my details:\nName: ${answers.name || 'Not provided'}\nEmail: ${answers.email || 'Not provided'}\nService: ${answers.service || 'Not provided'}`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/919266877791?text=${encodedMessage}`;
-    
-    window.open(whatsappUrl, '_blank');
+    const msg = `Hi, here are my details:\nName: ${answers.name}\nEmail: ${answers.email}\nService: ${answers.service}`;
+    window.open(`https://wa.me/919266877791?text=${encodeURIComponent(msg)}`);
   };
 
   const resetChat = () => {
@@ -75,118 +75,71 @@ const ChatBot = () => {
     setShowWhatsApp(false);
   };
 
-  // --- NEW: Function to go back ---
-  const goBack = () => {
-    // If on the final screen, go back to the last question
-    if (showWhatsApp) {
-      setShowWhatsApp(false);
-      setCurrentQuestion(questions.length - 1);
-      return;
-    }
-    // Otherwise, go to the previous question index
-    if (currentQuestion > 0) {
-      setCurrentQuestion(prev => prev - 1);
-    }
-  };
-
   const renderQuestion = () => {
-    const question = questions[currentQuestion];
-    
-    if (showWhatsApp) {
-      return (
-        <div className="whatsapp-section">
-          <div className="whatsapp-icon">📱</div>
-          <h3>Thank you!</h3>
-          <p>We've received your details. Let's talk on WhatsApp.</p>
-          
-          <div className="final-buttons-container">
-            <button className="whatsapp-button" onClick={handleWhatsAppRedirect}>
-              💬 Talk to us on WhatsApp
-            </button>
-            <button className="back-button" onClick={goBack}>
-              ← Go Back
-            </button>
-            <button className="reset-button" onClick={resetChat}>
-              🔄 Start Over
-            </button>
-          </div>
-        </div>
-      );
-    }
+    const q = questions[currentQuestion];
+
+    if (showWhatsApp) return (
+      <div className="bot-whatsapp-screen">
+        <h3 className="bot-title">✅ Thank you!</h3>
+        <p className="bot-sub">Let’s discuss on WhatsApp</p>
+
+        <button className="bot-btn-primary" onClick={handleWhatsAppRedirect}>💬 Open WhatsApp</button>
+        <button className="bot-btn-secondary" onClick={goBack}>← Back</button>
+        <button className="bot-btn-outline" onClick={resetChat}>🔄 Restart</button>
+      </div>
+    );
 
     return (
-      <div className="question-section">
-        <div className="question-header">
-          <div className="question-text">{question.text}</div>
-          <div className="question-number">
-            Question {currentQuestion + 1} of {questions.length}
-          </div>
-        </div>
-        
-        {question.type === 'text' || question.type === 'email' ? (
+      <div className="bot-question-block">
+        <div className="bot-question">{q.text}</div>
+        <div className="bot-step">Question {currentQuestion + 1} of {questions.length}</div>
+
+        {q.type !== "select" ? (
           <form onSubmit={(e) => {
             e.preventDefault();
-            const input = e.currentTarget.elements[0];
-            if (input.value.trim()) {
-              handleAnswer(input.value.trim());
-            }
+            const input = e.target[0];
+            if (input.value.trim()) handleAnswer(input.value.trim());
           }}>
             <input
-              type={question.type}
-              placeholder={`Enter your ${question.key}`}
-              className="text-input"
+              type={q.type}
+              className="bot-input"
+              placeholder={`Enter your ${q.key}`}
+              defaultValue={answers[q.key] || ""}
               autoFocus
-              // --- NEW: Prefill the input with the existing answer ---
-              defaultValue={answers[question.key] || ''}
             />
           </form>
-        ) : question.type === 'select' ? (
-          <div className="options">
-            {question.options.map((option, index) => (
+        ) : (
+          <div className="bot-options">
+            {q.options.map((o, i) => (
               <button
-                key={index}
-                // --- NEW: Add 'active' class if this option was selected ---
-                className={`option-button ${answers[question.key] === option ? 'active' : ''}`}
-                onClick={() => handleAnswer(option)}
+                key={i}
+                onClick={() => handleAnswer(o)}
+                className={`bot-option-btn ${answers[q.key] === o ? "active" : ""}`}
               >
-                {option}
+                {o}
               </button>
             ))}
           </div>
-        ) : null}
-
-        {/* --- NEW: Renders the "Previous" button if not on the first question --- */}
-        {currentQuestion > 0 && (
-          <button className="back-button" onClick={goBack}>
-            ← Previous
-          </button>
         )}
+
+        {currentQuestion > 0 && <button className="bot-back" onClick={goBack}>← Back</button>}
       </div>
     );
   };
 
   return (
-    <div className="chatbot-container">
+    <div className="chatbot-fixed">
       {isOpen && (
-        <div className="chatbot-window">
-          <div className="chatbot-header">
-            <h3>🤖 Chat Assistant</h3>
-            <button className="close-button" onClick={() => setIsOpen(false)}>
-              ✕
-            </button>
+        <div className="bot-window">
+          <div className="bot-header">
+            <span>🩺 MediLaw Assistant</span>
+            <button className="bot-close" onClick={() => setIsOpen(false)}>✕</button>
           </div>
-          <div className="chatbot-content">
-            {renderQuestion()}
-          </div>
+          <div className="bot-body">{renderQuestion()}</div>
         </div>
       )}
-      
-      <button 
-        className="chatbot-toggle"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        💬
-      </button>
+
+      <button className="bot-toggle" onClick={() => setIsOpen(!isOpen)}>💬</button>
     </div>
   );
 };

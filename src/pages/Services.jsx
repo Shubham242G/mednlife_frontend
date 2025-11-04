@@ -31,7 +31,7 @@ const ServicesSection = () => {
       data-theme="teal"
       className="relative w-full min-h-screen bg-cover bg-center overflow-hidden text-[#17ADA1]"
       style={{
-        backgroundImage: "url('/images/services-bg.jpg')",
+        backgroundImage: "url('/assets/services.jpg')",
       }}
     >
       {/* Gradient Overlay */}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const IntroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
 
@@ -185,10 +185,11 @@ const IntroSection = () => {
               >
                 {/* Glow effect */}
                 <div className="absolute -inset-2 bg-[#17ADA1] rounded-lg blur-xl opacity-40 animate-pulse" />
-
+              <Link to='/contact-us'>
                 <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
                   Get Started Today
                 </button>
+                </Link>
               </motion.div>
             </div>
           </div>

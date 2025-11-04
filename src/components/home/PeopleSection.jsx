@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const PeopleSection = () => {
   return (
@@ -59,7 +60,7 @@ const PeopleSection = () => {
                           className="w-full mt-8 md:w-auto group relative bg-gradient-to-r from-[#17ADA1] to-[#14968C] text-white px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl"
                         >
                           <div className="absolute inset-0 bg-gradient-to-r from-[#14968C] to-[#0d7c72] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                          <span className="relative">Get Started Today</span>
+                          <Link to='/about-us'><span className="relative">Meet our team</span></Link>
                         </motion.button>
                       </motion.div>
 

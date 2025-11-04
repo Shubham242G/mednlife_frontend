@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const ExpertiseSection = () => {
+
+
   const services = [
     {
       id: 1,
@@ -75,16 +77,15 @@ const ExpertiseSection = () => {
               </motion.span>
 
               <h2
-  className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mt-3 mb-6 overflow-hidden"
-  style={{
-    fontFamily: "'Playfair Display', serif",
-    lineHeight: '1.2', // adjust for spacing between lines
-    maxHeight: '3.6em', // 3 lines × 1.2em line height = 3.6em
-  }}
->
-  With over 5.2 million medical malpractice cases filed annually in India, proactive legal compliance is your only defense.
-</h2>
-
+                className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mt-3 mb-6 overflow-hidden"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  lineHeight: '1.2',
+                  maxHeight: '3.6em', // still 3 lines
+                }}
+              >
+                With over 5.2 million medical malpractice cases filed annually in India, proactive legal compliance is your only defense.
+              </h2>
 
             </motion.div>
 
@@ -97,6 +98,7 @@ const ExpertiseSection = () => {
               className="hidden lg:block w-1 h-48 origin-top bg-gradient-to-b from-[#17ADA1] via-[#4ECDC4] to-transparent flex-shrink-0"
             ></motion.div>
 
+
             {/* Right CTA */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -108,12 +110,19 @@ const ExpertiseSection = () => {
               <motion.button
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.96 }}
-                className="w-full md:w-auto group relative bg-gradient-to-r from-[#17ADA1] to-[#14968C] text-white px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl"
+                onClick={() => {
+                  const phoneNumber = "+918595650338"; 
+                  const message = "Hi, I'm interested in learning more about your legal services.";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, "_blank");
+                }}
+                className="w-full md:w-auto group relative bg-gradient-to-r from-[#17ADA1] to-[#14968C] text-white px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#14968C] to-[#0d7c72] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <span className="relative">Get Started Today</span>
               </motion.button>
             </motion.div>
+
           </div>
         </div>
 
@@ -171,14 +180,14 @@ const ExpertiseSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 whileHover={{ y: -12 }}
-                className="group relative"
+                className="group relative h-full flex"
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                 ></div>
 
                 <div
-                  className={`relative bg-gradient-to-br ${service.gradient} rounded-2xl p-8 md:p-10 lg:p-12 min-h-[580px] flex flex-col border border-white/20 shadow-2xl group-hover:shadow-3xl transition-all duration-300 backdrop-blur-sm`}
+                  className={`relative bg-gradient-to-br ${service.gradient} rounded-2xl p-8 md:p-10 lg:p-12 min-h-[580px] h-full flex flex-col border border-white/20 shadow-2xl group-hover:shadow-3xl transition-all duration-300 backdrop-blur-sm`}
                 >
                   <div
                     className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.accentColor} opacity-40`}

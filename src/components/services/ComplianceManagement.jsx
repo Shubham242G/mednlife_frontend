@@ -1,17 +1,32 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion";
 
 const ComplianceManagementPage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
 
+
+  const partners = [
+    { id: 1, icon: "/assets/brand1.png" },
+    { id: 2, icon: "/assets/brand3.png" },
+    { id: 3, icon: "/assets/brand4.png" },
+    { id: 4, icon: "/assets/brand5.png" },
+  ];
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#17ada1] via-[#17ada1]/80 to-white/95 pt-28 pb-20 px-4">
+      <section
+        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+        style={{
+          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Compliance Management
           </h1>
-          <p className="text-lg text-gray-700 mb-10 leading-relaxed">
+          <p className="text-lg text-white mb-10 leading-relaxed">
             Navigate complex healthcare regulations with confidence through comprehensive compliance management 
             solutions tailored to your practice.
           </p>
@@ -300,70 +315,36 @@ const ComplianceManagementPage = () => {
         </div>
       </section>
 
+      
       {/* Trusted By */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-center text-gray-500 mb-10 font-semibold text-sm tracking-wider uppercase">Trusted by</h3>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="h-12 flex items-center">
-                <div className="bg-gray-100 px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-300">
-                  <span className="text-sm text-gray-400 font-medium">Partner Logo</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     <div className="relative overflow-hidden mt-10">
+            <motion.div
+              className="flex gap-12 md:gap-16 items-center"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                duration: 25,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {[...partners, ...partners].map((partner, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1 }}
+                  className="flex-shrink-0 w-60 h-40 flex items-center justify-center group"
+                >
+                  <div className="relative w-full h-full flex items-center justify-center bg-white rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-[#17ADA1]/30">
+                    <img
+                      src={partner.icon}
+                      alt={`Partner ${partner.id}`}
+                      className="max-h-24 max-w-48 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+      </div>
 
-      {/* MediLaw in Focus */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">MediLaw in Focus</h2>
-            <a href="#" className="text-[#17ada1] hover:text-[#0d9488] font-semibold flex items-center text-sm transition-colors duration-300">
-              View All
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { 
-                title: 'Complexities of Pay-by-Performance Contracts and Liability Implications', 
-                category: 'Wellness and Clinics', 
-                date: 'March 05' 
-              },
-              { 
-                title: 'Breaking the Barriers of Care', 
-                category: 'Telemedicine', 
-                date: 'March 03' 
-              },
-              { 
-                title: 'Avoiding the Spectrum of Lost Revenue', 
-                category: 'Medical', 
-                date: 'March 03' 
-              }
-            ].map((article, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="bg-gradient-to-br from-teal-50 to-teal-100 h-48 flex items-center justify-center">
-                  <span className="text-teal-400 text-sm font-medium">Article Image</span>
-                </div>
-                <div className="p-6">
-                  <span className="inline-block bg-[#17ada1] text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-                    {article.category}
-                  </span>
-                  <h3 className="text-base font-bold text-gray-900 mb-3 leading-snug hover:text-[#17ada1] transition-colors duration-300 cursor-pointer">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-500 text-xs font-medium">{article.date}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-[#17ada1] to-[#138f85] text-white">

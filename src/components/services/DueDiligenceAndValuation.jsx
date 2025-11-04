@@ -1,19 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const DueDiligenceAndValuation = () => {
+
+  const partners = [
+    { id: 1, icon: "/assets/brand1.png" },
+    { id: 2, icon: "/assets/brand3.png" },
+    { id: 3, icon: "/assets/brand4.png" },
+    { id: 4, icon: "/assets/brand5.png" },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#17ada1] via-[#17ada1]/80 to-white/95 pt-28 pb-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+      <section
+        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+        style={{
+          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Background overlay */}
+        <div className="absolute inset-0 bg-black/20" />
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/50 to-transparent" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Due Diligence &amp; Valuation
           </h1>
-          <p className="text-lg text-gray-700 mb-10 leading-relaxed">
+          <p className="text-lg text-white mb-10 leading-relaxed">
             Ensure compliance, accuracy, and value in your healthcare business
             decisions with our specialized due diligence and valuation services.
-            MediLaw delivers legal and financial precision tailored for the
+            MednLaw delivers legal and financial precision tailored for the
             healthcare sector.
           </p>
           <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
@@ -21,6 +45,7 @@ const DueDiligenceAndValuation = () => {
           </button>
         </div>
       </section>
+
 
       {/* What is Due Diligence & Valuation */}
       <section className="py-20 px-4 bg-white">
@@ -40,8 +65,8 @@ const DueDiligenceAndValuation = () => {
                   clinics, or startups.
                 </p>
                 <p>
-                  We provide comprehensive analysis covering regulatory compliance, 
-                  financial performance, operational efficiency, and market positioning 
+                  We provide comprehensive analysis covering regulatory compliance,
+                  financial performance, operational efficiency, and market positioning
                   to give you complete confidence in your healthcare business decisions.
                 </p>
               </div>
@@ -70,12 +95,12 @@ const DueDiligenceAndValuation = () => {
         </div>
       </section>
 
-      {/* Why MediLaw Section */}
+      {/* Why MednLaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MediLaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
-            At MediLaw, we combine healthcare domain expertise with legal and
+            At MednLaw, we combine healthcare domain expertise with legal and
             financial accuracy. Our team ensures every valuation, risk
             assessment, or compliance review stands up to regulatory scrutiny and
             industry benchmarks.
@@ -107,11 +132,11 @@ const DueDiligenceAndValuation = () => {
         </div>
       </section>
 
-      {/* The MediLaw Approach */}
+      {/* The MednLaw Approach */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            The MediLaw Approach
+            The MednLaw Approach
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -215,106 +240,35 @@ const DueDiligenceAndValuation = () => {
         </div>
       </section>
 
-      {/* Partner Section */}
-      <section className="py-20 px-4 bg-[#17ada1] text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/10 rounded-xl h-96 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0121 12c0 5.523-4.477 10-10 10S1 17.523 1 12 5.477 2 11 2c2.31 0 4.438.793 6.118 2.084m-.618 3.916A8.967 8.967 0 0018 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8c1.657 0 3.188.471 4.482 1.084" />
-                  </svg>
-                </div>
-                <p className="text-white font-semibold text-lg">Strategic Partnership</p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Your Partner in Comprehensive Healthcare Due Diligence and Valuation
-              </h2>
-              <div className="space-y-5 text-sm leading-relaxed">
-                <p className="text-white/95">
-                  We help you make strategic, well-informed healthcare investments
-                  with accurate and compliant valuation reports. Whether you're
-                  acquiring, expanding, or restructuring, MediLaw ensures financial
-                  clarity and legal security.
-                </p>
-                <p className="text-white/95">
-                  Our comprehensive approach combines financial analysis, legal compliance review, 
-                  and healthcare operational expertise to provide you with actionable insights 
-                  for confident decision-making.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Trusted By */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-center text-gray-500 mb-10 font-semibold text-sm tracking-wider uppercase">Trusted by</h3>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="h-12 flex items-center">
-                <div className="bg-gray-100 px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-300">
-                  <span className="text-sm text-gray-400 font-medium">Partner Logo</span>
-                </div>
-              </div>
-            ))}
+      <div className="relative overflow-hidden mt-10">
+            <motion.div
+              className="flex gap-12 md:gap-16 items-center"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                duration: 25,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {[...partners, ...partners].map((partner, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1 }}
+                  className="flex-shrink-0 w-60 h-40 flex items-center justify-center group"
+                >
+                  <div className="relative w-full h-full flex items-center justify-center bg-white rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-[#17ADA1]/30">
+                    <img
+                      src={partner.icon}
+                      alt={`Partner ${partner.id}`}
+                      className="max-h-24 max-w-48 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* MediLaw in Focus */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">MediLaw in Focus</h2>
-            <a href="#" className="text-[#17ada1] hover:text-[#0d9488] font-semibold flex items-center text-sm transition-colors duration-300">
-              View All
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { 
-                title: 'Key Factors in Healthcare Facility Valuation', 
-                category: 'Valuation', 
-                date: 'March 05' 
-              },
-              { 
-                title: 'Due Diligence Best Practices for Healthcare M&A', 
-                category: 'Due Diligence', 
-                date: 'March 03' 
-              },
-              { 
-                title: 'Understanding Healthcare Business Valuations', 
-                category: 'Financial', 
-                date: 'March 03' 
-              }
-            ].map((article, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="bg-gradient-to-br from-teal-50 to-teal-100 h-48 flex items-center justify-center">
-                  <span className="text-teal-400 text-sm font-medium">Article Image</span>
-                </div>
-                <div className="p-6">
-                  <span className="inline-block bg-[#17ada1] text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-                    {article.category}
-                  </span>
-                  <h3 className="text-base font-bold text-gray-900 mb-3 leading-snug hover:text-[#17ada1] transition-colors duration-300 cursor-pointer">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-500 text-xs font-medium">{article.date}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Footer CTA */}
       <section className="py-20 px-4 bg-gradient-to-r from-[#17ada1] to-[#138f85] text-white">
@@ -355,19 +309,19 @@ const DueDiligenceAndValuation = () => {
                 Empower Your Decisions With Expert Valuation Insights
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay informed with our comprehensive valuation reports that provide 
-                real-time market data, regulatory compliance status, and financial 
+                Stay informed with our comprehensive valuation reports that provide
+                real-time market data, regulatory compliance status, and financial
                 performance metrics to guide your strategic healthcare investments.
               </p>
               <form className="space-y-5">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
+                <input
+                  type="text"
+                  placeholder="Name"
                   className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
                 />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
+                <input
+                  type="email"
+                  placeholder="Email"
                   className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
                 />
                 <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
