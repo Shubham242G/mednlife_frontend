@@ -149,8 +149,9 @@ const IntroSection = () => {
                 className="w-3/5 flex-shrink-0"
               >
                 <h1
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif leading-tight tracking-tight break-words"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif leading-tight tracking-tight break-words max-h-[9rem] overflow-hidden"
                   style={{ fontFamily: "'Playfair Display', serif" }}
+
                 >
                   {slides[currentSlide].title}
                 </h1>
@@ -158,9 +159,7 @@ const IntroSection = () => {
             </AnimatePresence>
 
             {/* Divider Line */}
-            <div className="w-1 h-20 md:h-24 bg-white flex-shrink-0" />
-
-            {/* Right Column - Subtitle + CTA (30% width) */}
+            <div className="w-1 min-h-[30px] bg-white flex-shrink-0 self-stretch" />            {/* Right Column - Subtitle + CTA (30% width) */}
             <div className="w-2/5 flex-shrink-0 flex flex-col justify-end space-y-4">
               <AnimatePresence mode="wait">
                 <motion.div

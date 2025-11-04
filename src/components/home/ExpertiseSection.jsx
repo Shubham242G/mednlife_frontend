@@ -8,7 +8,7 @@ const ExpertiseSection = () => {
       title: "Comprehensive Legal Services",
       icon: "assets/1st-layout.png",
       gradient: "from-[#17ADA1] to-[#14968C]",
-      accentColor: "from-yellow-400/20 to-transparent",
+      accentColor: "from-gray-500/20 to-transparent",
       description:
         "From strategic planning for healthcare startups to healthcare risk management, we provide end-to-end medical compliance solutions. We always stay ahead of the dynamic healthcare regulations and navigate the legal intricacies with ease.",
     },
@@ -16,7 +16,7 @@ const ExpertiseSection = () => {
       id: 2,
       title: "Reputation Management",
       icon: "assets/2nd-layout.png",
-      gradient: "from-[#4ECDC4] to-[#17ADA1]",
+      gradient: "from-[#17ADA1] to-[#14968C]",
       accentColor: "from-gray-500/20 to-transparent",
       description:
         "We don't let legal disputes sabotage your reputation. With our reputation management specialists, you can mitigate legal risks, protect your healthcare brand and ensure your medical practice is regarded as reliable in the industry.",
@@ -25,8 +25,8 @@ const ExpertiseSection = () => {
       id: 3,
       title: "Strategic Compliance Consulting",
       icon: "assets/3rd-layout.png",
-      gradient: "from-[#4ECDC4] to-[#17ADA1]",
-      accentColor: "from-cyan-400/20 to-transparent",
+      gradient: "from-[#17ADA1] to-[#14968C]",
+      accentColor: "from-gray-500/20 to-transparent",
       description:
         "Our healthcare startup advisory ensures your business isn't entangled in legal complexities. We prepare actionable insights, plans, and strategies to help you navigate the complex regulatory framework.",
     },
@@ -69,17 +69,23 @@ const ExpertiseSection = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.1, duration: 0.5 }}
-                className="inline-block text-[#17ADA1] font-semibold text-xs tracking-widest uppercase mb-2"
+                className="inline-block text-[#17ADA1] font-semibold text-sm tracking-widest uppercase mb-2"
               >
                 Protect Your Practice
               </motion.span>
 
               <h2
-                className="text-[2.75rem] md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-tight mt-3 mb-6"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                With over 5.2 million medical malpractice cases filed annually in India, proactive legal compliance is your only defense.
-              </h2>
+  className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mt-3 mb-6 overflow-hidden"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    lineHeight: '1.2', // adjust for spacing between lines
+    maxHeight: '3.6em', // 3 lines × 1.2em line height = 3.6em
+  }}
+>
+  With over 5.2 million medical malpractice cases filed annually in India, proactive legal compliance is your only defense.
+</h2>
+
+
             </motion.div>
 
             {/* Divider */}
@@ -88,7 +94,7 @@ const ExpertiseSection = () => {
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden lg:block w-1 h-48 origin-top bg-teal-300 flex-shrink-0"
+              className="hidden lg:block w-1 h-48 origin-top bg-gradient-to-b from-[#17ADA1] via-[#4ECDC4] to-transparent flex-shrink-0"
             ></motion.div>
 
             {/* Right CTA */}
@@ -110,6 +116,7 @@ const ExpertiseSection = () => {
             </motion.div>
           </div>
         </div>
+
       </section>
 
       {/* Services Section */}

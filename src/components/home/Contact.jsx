@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -22,14 +23,27 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex justify-center items-center px-5 py-20 bg-teal-50">
-      <div className="max-w-4xl w-full bg-white rounded-2xl shadow-2xl p-12 md:p-16">
-        
+    <div className="w-full min-h-screen bg-gradient-to-b from-teal-50 via-teal-200 to-teal-300 flex justify-center items-center px-5 py-20 relative overflow-hidden">
+      {/* Gradient overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0d7c72]/20 via-transparent to-[#0d7c72]/10" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl w-full bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-12 md:p-16 relative z-10 border border-white/30"
+      >
         {/* Header Section */}
         <div className="text-center mb-12">
-          <span className="inline-block text-[#17ada1] text-xs font-bold tracking-[0.3em] uppercase mb-4">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="inline-block text-[#17ada1] text-xs font-bold tracking-[0.3em] uppercase mb-4"
+          >
             Contact MediLaw
-          </span>
+          </motion.span>
           <h1 className="text-[#17ada1] text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Let's discuss your healthcare legal needs
           </h1>
@@ -138,9 +152,11 @@ const ContactForm = () => {
           </div>
 
           {/* Submit Button */}
-          <button
+          <motion.button
             type="submit"
-            className="w-full md:w-auto px-12 py-4 bg-[#0f766e] hover:bg-[#0d9488] 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-[#17ADA1] to-[#14968C] hover:from-[#14968C] hover:to-[#0d7c72]
             text-white font-bold text-sm tracking-wider rounded-lg 
             hover:shadow-lg transform hover:-translate-y-0.5 
             transition-all duration-300 flex items-center justify-center gap-3 group"
@@ -158,14 +174,14 @@ const ContactForm = () => {
             <span className="text-lg group-hover:translate-x-1 transition-transform duration-300">
               →
             </span>
-          </button>
+          </motion.button>
 
           {/* Form Note */}
           <p className="text-gray-500 text-xs mt-6 text-center">
             We typically respond within 24 hours. For urgent matters, call us directly at +91 98765 43210
           </p>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };
