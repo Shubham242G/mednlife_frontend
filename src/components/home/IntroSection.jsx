@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const IntroSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(1);
 
   const slides = [
     {
@@ -32,7 +32,7 @@ const IntroSection = () => {
     },
     {
       id: 5,
-      image: "/assets/banner5.png",
+      image: "/assets/banner3.jpg",
       title: "Medical Negligence Defense.",
       subtitle: "Specialized in Indian Healthcare Law.",
     },
