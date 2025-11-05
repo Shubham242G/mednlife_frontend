@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const HealthcareFacilitiesPage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -15,27 +16,45 @@ const HealthcareFacilitiesPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section
-        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
-        style={{
-          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Design & Construction of Healthcare Facilities
-          </h1>
-          <p className="text-lg text-white mb-10 leading-relaxed">
-            Navigate the complex regulations and requirements for healthcare facility design and construction with 
-            expert guidance from MediLaw.
-          </p>
-          <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Get Started
-          </button>
-        </div>
-      </section>
+<section
+  className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+  style={{
+    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* ✅ Dark gradient overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-[#17ADA1]/30" />
+
+  <div className="relative z-10 max-w-4xl mx-auto text-center">
+    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      Design & Construction of Healthcare Facilities
+    </h1>
+    <p className="text-lg text-white mb-10 leading-relaxed">
+      Navigate the complex regulations and requirements for healthcare facility design and 
+      construction with expert guidance from MediLaw.
+    </p>
+
+    {/* ✅ CTA from previous components */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="relative w-fit mx-auto"
+    >
+      <div className="absolute -inset-2 bg-[#17ADA1] rounded-lg blur-xl opacity-40 animate-pulse" />
+
+      <Link to="/contact-us">
+        <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
+          Get Started Today
+        </button>
+      </Link>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* What is Design & Construction Section */}
       <section className="py-20 px-4 bg-white">
@@ -377,49 +396,6 @@ const HealthcareFacilitiesPage = () => {
             </svg>
             Let's Connect
           </button>
-        </div>
-      </section>
-
-      {/* Empower Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl h-[500px] flex items-center justify-center shadow-xl">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <span className="text-teal-700 font-semibold text-lg">Team Collaboration</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empower Your Practice With Real-Time Actionable Insights
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay informed with our project management system that provides real-time updates on construction 
-                progress, regulatory changes, and compliance milestones. Our dashboard gives you actionable insights 
-                to keep your facility project on track and within budget.
-              </p>
-              <form className="space-y-5">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-                  Sign Up
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
       </section>
     </div>

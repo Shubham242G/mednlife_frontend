@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const HealthcareStartupAdvisoryPage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -15,27 +16,33 @@ const HealthcareStartupAdvisoryPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section
-        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
-        style={{
-          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Healthcare Startup Advisory
-          </h1>
-          <p className="text-lg text-white mb-10 leading-relaxed">
-            Navigate the complexities of launching and scaling your healthcare venture with comprehensive legal 
-            and strategic guidance tailored to the unique challenges of the healthcare industry.
-          </p>
-          <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Get Started
-          </button>
-        </div>
-      </section>
+<section
+  className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+  style={{
+    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* ✅ Gradient overlay for text clarity */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-[#17ADA1]/30" />
+
+  <div className="relative z-10 max-w-4xl mx-auto text-center">
+    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      Healthcare Startup Advisory
+    </h1>
+    <p className="text-lg text-white mb-10 leading-relaxed">
+      Navigate the complexities of launching and scaling your healthcare venture with comprehensive legal 
+      and strategic guidance tailored to the unique challenges of the healthcare industry.
+    </p>
+    <Link to="/contact-us">
+        <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
+          Get Started Today
+        </button>
+      </Link>
+  </div>
+</section>
 
       {/* What is Healthcare Startup Advisory Section */}
       <section className="py-20 px-4 bg-white">
@@ -368,108 +375,6 @@ const HealthcareStartupAdvisoryPage = () => {
             </svg>
             Let&apos;s Connect
           </button>
-        </div>
-      </section>
-
-      {/* Empower Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl h-[500px] flex items-center justify-center shadow-xl">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <span className="text-teal-700 font-semibold text-lg">Team Collaboration</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empower Your Startup With Strategic Insights
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay informed with our startup advisory platform that provides real-time updates on regulatory 
-                changes, compliance deadlines, and strategic milestones. Our dashboard gives you actionable insights 
-                to grow your healthcare venture with confidence.
-              </p>
-              <form className="space-y-5">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-                  Sign Up
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {[
-              {
-                question: 'What legal considerations should I be aware of when starting a healthcare business?',
-                answer: 'Key considerations include entity structure selection, healthcare licensing requirements, HIPAA compliance, fraud and abuse laws, professional liability, corporate practice of medicine restrictions, employment law, intellectual property protection, and investor agreements. Each aspect requires careful planning and expert guidance.'
-              },
-              {
-                question: 'How can MediLaw assist in navigating healthcare regulations for my startup?',
-                answer: 'MediLaw provides comprehensive regulatory guidance including identifying applicable requirements, preparing compliance programs, obtaining necessary licenses and approvals, implementing HIPAA safeguards, structuring compliant business arrangements, and providing ongoing advisory support as regulations evolve.'
-              },
-              {
-                question: 'What are the most common legal pitfalls healthcare startups should avoid?',
-                answer: 'Common pitfalls include inadequate entity structure, missing licenses or permits, HIPAA violations, anti-kickback statute violations, inadequate contracts, intellectual property disputes, employment law issues, and failure to maintain proper corporate governance. Proper legal foundation prevents these costly mistakes.'
-              },
-              {
-                question: 'How do I ensure my healthcare startup complies with anti-fraud and abuse laws?',
-                answer: 'Compliance requires understanding and avoiding violations of anti-kickback statutes, Stark Law, False Claims Act, and state equivalents. This includes proper structuring of financial relationships, compensation arrangements, referrals, and billing practices. MediLaw helps design compliant business models from the start.'
-              },
-              {
-                question: 'What role does MediLaw play in the strategic planning for healthcare businesses?',
-                answer: 'MediLaw serves as both legal counsel and strategic advisor, helping you develop business strategy that balances growth objectives with regulatory requirements. We assist with market analysis, business model validation, partnership structures, funding strategy, and scaling plans tailored to healthcare markets.'
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden border-2 border-gray-200 hover:border-[#17ada1] transition-all duration-300">
-                <button
-                  onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  className="w-full px-6 py-5 text-left flex justify-between items-start hover:bg-gray-50 transition"
-                >
-                  <span className="font-semibold text-gray-900 pr-4 text-sm leading-relaxed">
-                    {faq.question}
-                  </span>
-                  <svg
-                    className={`w-5 h-5 text-teal-600 flex-shrink-0 transform transition-transform mt-0.5 ${
-                      openFAQ === index ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {openFAQ === index && (
-                  <div className="px-6 pb-5 border-t border-gray-100">
-                    <p className="text-gray-600 text-sm leading-relaxed pt-4">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </div>

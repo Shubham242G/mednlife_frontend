@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const services = [
   { name: "Defence of Medical Negligence Claims", path: "/services/defence-of-medical-negligence-claims" },
@@ -34,7 +34,11 @@ const ServicesSection = () => {
         backgroundImage: "url('/assets/services.jpg')",
       }}
     >
-      {/* Gradient Overlay */}
+
+      {/* Top gradient for navbar visibility */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/50 to-transparent pointer-events-none z-20" />
+
+      {/* Main gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-[#17ADA1]/40" />
 
       {/* Content */}
@@ -45,14 +49,30 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <p className="text-[#3FC6B9] text-sm md:text-base font-light tracking-[0.3em] uppercase mb-4">
             Our Services
           </p>
-          <h2 className="text-[#17ADA1] text-4xl md:text-6xl font-light">
+          <h2 className="text-[#17ADA1] text-4xl md:text-6xl font-light mb-8">
             Expert legal support for every need
           </h2>
+
+          {/* CTA BUTTON BELOW TITLE */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative w-fit mx-auto mb-10"
+          >
+            {/* Glow effect */}
+            <div className="absolute -inset-2 bg-[#17ADA1] rounded-lg blur-xl opacity-40 animate-pulse" />
+            <Link to="/contact-us">
+              <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
+                Get Started Today
+              </button>
+            </Link>
+          </motion.div>
         </motion.div>
 
         {/* Grid of Service Cards */}

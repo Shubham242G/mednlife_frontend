@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const AccountingServicesPage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -12,25 +13,49 @@ const AccountingServicesPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section
-        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+       <section
+        className="relative w-full min-h-[60vh] bg-cover bg-center flex items-center"
         style={{
-          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Accounting Services
-          </h1>
-          <p className="text-lg text-white mb-10 leading-relaxed">
-            Specialized financial management and accounting services tailored to the unique needs of healthcare 
-            providers, ensuring compliance, accuracy, and strategic financial insights.
-          </p>
-          <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Get Started
-          </button>
+          backgroundImage: "url('/assets/services-banner.jpg')",
+        }}
+      >
+        {/* ✅ Dark Overlay so navbar text remains visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-[#17ADA1]/30" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-24">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-white text-4xl md:text-6xl font-bold max-w-3xl leading-tight"
+          >
+            Accounting Services for Healthcare Institutions
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="text-white/90 mt-4 max-w-2xl text-lg"
+          >
+            Maintain financial accuracy, ensure compliance, and make smarter business decisions with our specialized accounting solutions tailored for medical and healthcare institutions.
+          </motion.p>
+
+          {/* ✅ Same CTA Button & placement */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative w-fit mt-8"
+          >
+            <div className="absolute -inset-2 bg-[#17ADA1] rounded-lg blur-xl opacity-40 animate-pulse" />
+
+            <Link to="/contact-us">
+              <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/30 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
+                Get Started Today
+              </button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -65,7 +90,7 @@ const AccountingServicesPage = () => {
                   systems can lead to cash flow problems, compliance violations, and missed growth opportunities.
                 </p>
                 <p>
-                  MediLaw provides comprehensive accounting services designed specifically for healthcare providers. 
+                  MednLife provides comprehensive accounting services designed specifically for healthcare providers. 
                   We combine financial expertise with deep understanding of medical practice operations, ensuring 
                   accurate bookkeeping, timely reporting, tax optimization, and strategic financial guidance that 
                   supports your practice&apos;s success.
@@ -96,12 +121,12 @@ const AccountingServicesPage = () => {
         </div>
       </section>
 
-      {/* Why MediLaw Section */}
+      {/* Why MednLife Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MediLaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLife?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
-            MediLaw brings specialized expertise in healthcare accounting, combining financial acumen with deep 
+            MednLife brings specialized expertise in healthcare accounting, combining financial acumen with deep 
             understanding of medical practice operations and regulatory requirements. We understand the unique 
             challenges healthcare providers face—from complex insurance reimbursements to healthcare-specific tax 
             considerations. Our team provides accurate, timely financial services while offering strategic guidance 
@@ -151,10 +176,10 @@ const AccountingServicesPage = () => {
         </div>
       </section>
 
-      {/* The MediLaw Approach */}
+      {/* The MednLife Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MediLaw Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MednLife Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -301,7 +326,7 @@ const AccountingServicesPage = () => {
                   compliance, medical practices face financial challenges that demand specialized knowledge.
                 </p>
                 <p className="text-white/95">
-                  MediLaw bridges this gap with comprehensive accounting services designed specifically for 
+                  MednLife bridges this gap with comprehensive accounting services designed specifically for 
                   healthcare providers. We understand the financial intricacies of medical practices—from revenue 
                   cycle management to healthcare-specific tax considerations—and provide accurate, timely financial 
                   services that support your operational success.
@@ -355,7 +380,7 @@ const AccountingServicesPage = () => {
             We are here for you: Every Step of Your Healthcare Compliance Journey
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
-            Whether you need comprehensive accounting services or strategic financial guidance, MediLaw offers 
+            Whether you need comprehensive accounting services or strategic financial guidance, MednLife offers 
             exceptional financial support so you can focus on patient care. From bookkeeping to financial 
             planning, we&apos;re here to ensure your practice&apos;s financial health and success.
           </p>
@@ -368,48 +393,6 @@ const AccountingServicesPage = () => {
         </div>
       </section>
 
-      {/* Empower Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl h-[500px] flex items-center justify-center shadow-xl">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <span className="text-teal-700 font-semibold text-lg">Team Collaboration</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empower Your Practice With Real-Time Actionable Insights
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay informed with our financial management system that provides real-time updates on revenue, 
-                expenses, cash flow, and key performance indicators. Our dashboard gives you actionable insights 
-                to make informed financial decisions and optimize practice performance.
-              </p>
-              <form className="space-y-5">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-                  Sign Up
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

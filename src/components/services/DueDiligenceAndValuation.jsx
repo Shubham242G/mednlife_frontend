@@ -289,49 +289,6 @@ const DueDiligenceAndValuation = () => {
           </button>
         </div>
       </section>
-
-      {/* Empower Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl h-[500px] flex items-center justify-center shadow-xl">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <span className="text-teal-700 font-semibold text-lg">Data-Driven Insights</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empower Your Decisions With Expert Valuation Insights
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay informed with our comprehensive valuation reports that provide
-                real-time market data, regulatory compliance status, and financial
-                performance metrics to guide your strategic healthcare investments.
-              </p>
-              <form className="space-y-5">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-                  Request Consultation
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

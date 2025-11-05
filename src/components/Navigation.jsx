@@ -23,8 +23,8 @@ const Navigation = () => {
   }, [location]);
 
   const navLinks = [
-    { to: "/services", label: "Services" },
     { to: "/about-us", label: "About Us" },
+    { to: "/services", label: "Services" },
     { to: "/contact-us", label: "Contact Us" },
   ];
 

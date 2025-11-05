@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const LaborLawCompliance = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -14,30 +15,49 @@ const partners = [
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section
-        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
-        style={{
-          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Labor Law Compliance
-          </h1>
-          <p className="text-lg text-white mb-10 leading-relaxed">
-            Stay compliant and focus on patient care while we handle complex labor regulations. From employment 
-            contracts to workplace safety, we ensure your practice meets all legal requirements and maintains a 
-            fair work environment for your team.
-          </p>
-          <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Get Started
-          </button>
-        </div>
-      </section>
+<section
+  className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+  style={{
+    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* ✅ Dark gradient overlay (same as previous) */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-[#17ADA1]/30" />
 
-      {/* Why MediLaw Content Section */}
+  <div className="relative z-10 max-w-4xl mx-auto text-center">
+    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      Labor Law Compliance
+    </h1>
+    <p className="text-lg text-white mb-10 leading-relaxed">
+      Stay compliant and focus on patient care while we handle complex labor regulations.
+      From employment contracts to workplace safety, we ensure your practice meets all
+      legal requirements and maintains a fair work environment for your team.
+    </p>
+
+    {/* ✅ Replace button with your exact CTA */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="relative w-fit mx-auto"
+    >
+      {/* Glow */}
+      <div className="absolute -inset-2 bg-[#17ADA1] rounded-lg blur-xl opacity-40 animate-pulse" />
+
+      <Link to="/contact-us">
+        <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
+          Get Started Today
+        </button>
+      </Link>
+    </motion.div>
+  </div>
+</section>
+
+
+      {/* Why MednLife Content Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -60,7 +80,7 @@ const partners = [
                 </p>
                 <p>
                   Many small businesses and medical practices don't have internal HR departments or dedicated compliance 
-                  teams. MediLaw simplifies labor law compliance so they can focus on providing excellent care and 
+                  teams. MednLife simplifies labor law compliance so they can focus on providing excellent care and 
                   building their business.
                 </p>
               </div>
@@ -89,10 +109,10 @@ const partners = [
         </div>
       </section>
 
-      {/* Why MediLaw Section */}
+      {/* Why MednLife Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MediLaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLife?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
             Labor laws protect your practice and employees. We navigate federal and state requirements, from wage 
             regulations to anti-discrimination policies. Trusted labor specialists provide expert guidance so you 
@@ -139,10 +159,10 @@ const partners = [
         </div>
       </section>
 
-      {/* The MediLaw Approach */}
+      {/* The MednLife Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MediLaw Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MednLife Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -284,7 +304,7 @@ const partners = [
                   their commitment through fair treatment, safe conditions, and legal protection.
                 </p>
                 <p className="text-white/95">
-                  MediLaw ensures that your practice complies with labor laws while fostering a positive work environment. 
+                  MednLife ensures that your practice complies with labor laws while fostering a positive work environment. 
                   We help you navigate complex regulations so you can focus on what matters most: delivering exceptional 
                   patient care.
                 </p>
@@ -336,7 +356,7 @@ const partners = [
             We are here for you: Every Step of Your Healthcare Compliance Journey
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
-            Whether you need guidance on structuring healthcare compliance or updating your forms, MediLaw offers 
+            Whether you need guidance on structuring healthcare compliance or updating your forms, MednLife offers 
             exceptional legal support so you can focus on patient care. From HIPAA requirements to labor law compliance, 
             we're here to protect you.
           </p>
@@ -346,49 +366,6 @@ const partners = [
             </svg>
             Let's Connect
           </button>
-        </div>
-      </section>
-
-      {/* Empower Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl h-[500px] flex items-center justify-center shadow-xl">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <span className="text-teal-700 font-semibold text-lg">Team Empowerment</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empower Your Practice With Real-Time Compliance Insights
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay informed with our compliance monitoring system that provides real-time updates on labor law 
-                changes affecting your practice. Our dashboard gives you actionable insights to maintain compliance 
-                effortlessly.
-              </p>
-              <form className="space-y-5">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-                  Sign Up
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
       </section>
     </div>

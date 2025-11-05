@@ -13,26 +13,33 @@ const DefenceAgainstMedicalNegligence = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section
-        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
-        style={{
-          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Defense Against Medical Negligence
-          </h1>
-          <p className="text-lg text-white mb-10 leading-relaxed">
-            We offer personalized support and expert legal defense for medical professionals facing medical negligence claims.
-          </p>
-          <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Let's Connect
-          </button>
-        </div>
-      </section>
+      {/* Hero Section */}
+<section
+  className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+  style={{
+    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* ✅ Dark Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/20"></div>
+
+  <div className="relative z-10 max-w-4xl mx-auto text-center">
+    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      Defense Against Medical Negligence
+    </h1>
+
+    <p className="text-lg text-white mb-10 leading-relaxed">
+      We offer personalized support and expert legal defense for medical professionals facing medical negligence claims.
+    </p>
+
+    <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
+      Let's Connect
+    </button>
+  </div>
+</section>
 
       {/* What are Medical Negligence Claims */}
       <section className="py-20 px-4 bg-white">
@@ -264,45 +271,6 @@ const DefenceAgainstMedicalNegligence = () => {
             </svg>
             Schedule a Consultation
           </button>
-        </div>
-      </section>
-
-      {/* Empower Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl h-[500px] flex items-center justify-center shadow-xl">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <Scale className="w-16 h-16 text-teal-600" />
-                </div>
-                <span className="text-teal-700 font-semibold text-lg">Legal Excellence</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empower Your Practice With Expert Legal Defense
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay protected with our comprehensive defense strategies that provide peace of mind and allow you to focus on what matters most—providing quality patient care. Our expert team is available 24/7 to address your concerns.
-              </p>
-              <form className="space-y-5">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-                  Get Started
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
       </section>
     </div>

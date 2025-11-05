@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const IntellectualPropertyPage = () => {
   const partners = [
@@ -14,27 +15,34 @@ const IntellectualPropertyPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-     <section
-        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
-        style={{
-          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Intellectual Property Protection
-          </h1>
-          <p className="text-lg text-white mb-10 leading-relaxed">
-            Safeguard your medical innovations, research, and proprietary methods with comprehensive IP protection 
-            strategies tailored for healthcare professionals.
-          </p>
-          <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Talk To Our Experts
-          </button>
-        </div>
-      </section>
+<section
+  className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+  style={{
+    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* ✅ Gradient overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-[#17ADA1]/30" />
+
+  <div className="relative z-10 max-w-4xl mx-auto text-center">
+    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      Intellectual Property Protection
+    </h1>
+    <p className="text-lg text-white mb-10 leading-relaxed">
+      Safeguard your medical innovations, research, and proprietary methods with comprehensive IP protection 
+      strategies tailored for healthcare professionals.
+    </p>
+    <Link to="/contact-us">
+        <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
+          Get Started Today
+        </button>
+      </Link>
+  </div>
+</section>
+
 
       {/* What is IP Protection Section */}
       <section className="py-20 px-4 bg-white">
@@ -359,49 +367,6 @@ const IntellectualPropertyPage = () => {
             </svg>
             Let's Connect
           </button>
-        </div>
-      </section>
-
-      {/* Empower Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl h-[500px] flex items-center justify-center shadow-xl">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <span className="text-teal-700 font-semibold text-lg">IP Portfolio Management</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empower Your Practice With IP Management Insights
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay informed with our IP management system that provides real-time updates on patent applications, 
-                trademark registrations, and potential infringement alerts. Our dashboard gives you actionable insights 
-                to protect and maximize the value of your intellectual property portfolio.
-              </p>
-              <form className="space-y-5">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-                  Sign Up
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
       </section>
     </div>
