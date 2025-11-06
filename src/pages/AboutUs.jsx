@@ -1,25 +1,63 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+const useCountUp = (end, duration = 1500) => {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        let start = 0;
+        const increment = end / (duration / 16);
+
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= end) {
+                setCount(end);
+                clearInterval(timer);
+            } else {
+                setCount(Math.floor(start));
+            }
+        }, 16);
+
+        return () => clearInterval(timer);
+    }, [end, duration]);
+
+    return count;
+};
+
+const StatItem = ({ number, symbol, label }) => {
+  const count = useCountUp(number);
+
+  return (
+    <div className="transform hover:scale-105 transition">
+      <div className="text-5xl md:text-6xl font-bold text-[#17ADA1] mb-3">
+        {count}{symbol}
+      </div>
+      <div className="text-gray-600 text-lg font-medium">
+        {label}
+      </div>
+    </div>
+  );
+};
 
 
 const AboutUs = () => {
 
     const teamMembers = [
-  {
-    name: "Anusha Girish",
-    role: "Legal associate",
-    image: "/assets/anusha.jpg",
-    intro:
-      "Distinguished advocate with a sharp legal mind and strong commitment to justice. Graduated from Delhi University with an LLB, he fiercely advocates for clients' rights, earning a reputation as a formidable legal expert",
-  },
-  {
-    name: "Laxman Kumar",
-    role: "Legal associate",
-    image: "/assets/laxman.jpg",
-    intro:
-      "Commercial Litigation Specialist - With a sharp legal mind and a strong commitment to justice. He graduated from Delhi University with an LLB and is a dedicated advocate for his clients' rights in the courtroom. His relentless pursuit of favorable outcomes for his clients has earned him a reputation as a formidable legal advocate.",
-  },
-];
+        {
+            name: "Anusha Girish",
+            role: "Legal associate",
+            image: "/assets/anusha.jpg",
+            intro:
+                "Distinguished advocate with a sharp legal mind and strong commitment to justice. Graduated from Delhi University with an LLB, he fiercely advocates for clients' rights, earning a reputation as a formidable legal expert",
+        },
+        {
+            name: "Laxman Kumar",
+            role: "Legal associate",
+            image: "/assets/laxman.jpg",
+            intro:
+                "Commercial Litigation Specialist - With a sharp legal mind and a strong commitment to justice. He graduated from Delhi University with an LLB and is a dedicated advocate for his clients' rights in the courtroom. His relentless pursuit of favorable outcomes for his clients has earned him a reputation as a formidable legal advocate.",
+        },
+    ];
 
     return (
         <div className="min-h-screen bg-white text-gray-800">
@@ -27,22 +65,22 @@ const AboutUs = () => {
             <section
                 className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-6 md:px-12 overflow-hidden bg-cover bg-center bg-fixed"
                 style={{
-                    backgroundImage: "url('/assets/aboutUs.jpg')", 
+                    backgroundImage: "url('/assets/aboutUs.jpg')",
                 }}
             >
 
-               <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/50 to-transparent" />
 
 
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.2),_transparent_70%)]"></div>
 
-                
+
                 <div className="relative z-10 max-w-5xl text-white">
                     <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight drop-shadow-md">
                         About <span className="text-white/90">MedNLaw</span>
                     </h1>
                     <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                        Bridging the gap between medical expertise and legal excellence 
+                        Bridging the gap between medical expertise and legal excellence
                         building a transparent, ethical, and safer healthcare ecosystem.
                     </p>
                 </div>
@@ -168,113 +206,104 @@ const AboutUs = () => {
                 </div>
 
                 {/* Founder  */}
-      <div className="max-w-6xl mx-auto px-6 md:px-10 flex flex-col lg:flex-row items-center lg:gap-16 gap-10 mb-20 mt-20">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="w-full lg:w-[45%]"
-        >
-          <img
-            src="/assets/founder.webp"
-            alt="Founder"
-            className="rounded-2xl shadow-xl w-full h-[420px] object-cover"
-          />
-        </motion.div>
+                <div className="max-w-6xl mx-auto px-6 md:px-10 flex flex-col lg:flex-row items-center lg:gap-16 gap-10 mb-20 mt-20">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="w-full lg:w-[45%]"
+                    >
+                        <img
+                            src="/assets/founder.webp"
+                            alt="Founder"
+                            className="rounded-2xl shadow-xl w-full h-[420px] object-cover"
+                        />
+                    </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="w-full lg:w-[55%]"
-        >
-          <h2
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Meet Our Founder
-          </h2>
-          <h4 className="text-xl font-semibold text-[#0d7c72] mb-3">
-            Gaurav Sharma
-          </h4>
-          <p className="text-gray-600 leading-relaxed text-lg">
-            Founder, MedNLaw — Bridging medicine and law for a safer, ethical and
-            transparent healthcare ecosystem. With deep expertise in medico-legal
-            disputes, regulatory frameworks, and patient rights, Gaurav has led
-            MedNLaw to become India’s foremost healthcare legal advisory
-            initiative.
-          </p>
-        </motion.div>
-      </div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="w-full lg:w-[55%]"
+                    >
+                        <h2
+                            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+                            style={{ fontFamily: "'Playfair Display', serif" }}
+                        >
+                            Meet Our Founder
+                        </h2>
+                        <h4 className="text-xl font-semibold text-[#0d7c72] mb-3">
+                            Gaurav Sharma
+                        </h4>
+                        <p className="text-gray-600 leading-relaxed text-lg">
+                            Founder, MedNLaw — Bridging medicine and law for a safer, ethical and
+                            transparent healthcare ecosystem. With deep expertise in medico-legal
+                            disputes, regulatory frameworks, and patient rights, Gaurav has led
+                            MedNLaw to become India’s foremost healthcare legal advisory
+                            initiative.
+                        </p>
+                    </motion.div>
+                </div>
 
-      {/* Team title */}
-      <div className="text-center mb-14">
-        <h2
-          className="text-4xl md:text-5xl font-bold text-gray-900"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
-          Meet Our Team
-        </h2>
-        <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-          Our experts bring together years of legal & medical experience to
-          support healthcare professionals with excellence.
-        </p>
-      </div>
+                {/* Team title */}
+                <div className="text-center mb-14">
+                    <h2
+                        className="text-4xl md:text-5xl font-bold text-gray-900"
+                        style={{ fontFamily: "'Playfair Display', serif" }}
+                    >
+                        Meet Our Team
+                    </h2>
+                    <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+                        Our experts bring together years of legal & medical experience to
+                        support healthcare professionals with excellence.
+                    </p>
+                </div>
 
-      {/* Team Grid */}
-      <div className="max-w-6xl mx-auto px-2 md:px-6 flex justify-start md:justify-center gap-2 md:gap-4">
-        {teamMembers.map((m, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="relative group overflow-hidden rounded-2xl shadow-xl cursor-pointer"
-          >
-            <img
-              src={m.image}
-              alt={m.name}
-              className="w-full h-[360px] object-cover transform group-hover:scale-105 transition-all duration-500"
-            />
+                {/* Team Grid */}
+                <div className="max-w-6xl mx-auto px-2 md:px-6 flex justify-start md:justify-center gap-2 md:gap-4">
+                    {teamMembers.map((m, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: i * 0.1 }}
+                            className="relative group overflow-hidden rounded-2xl shadow-xl cursor-pointer"
+                        >
+                            <img
+                                src={m.image}
+                                alt={m.name}
+                                className="w-full h-[360px] object-cover transform group-hover:scale-105 transition-all duration-500"
+                            />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-all duration-500 p-6 flex flex-col justify-end text-white">
-              <h3 className="text-xl font-bold mb-1">{m.name}</h3>
-              <p className="text-sm text-teal-300 font-medium mb-3">{m.role}</p>
-              <p className="text-sm leading-relaxed">{m.intro}</p>
-            </div>
-
-            {/* Name below image */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white p-4 group-hover:opacity-0 transition duration-300">
-              <h3 className="text-lg font-bold">{m.name}</h3>
-              <span className="text-sm text-teal-300">{m.role}</span>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-            </section>
-
-            {/* STATS */}
-            <section className="py-20 px-6 md:px-16 bg-white border-t border-gray-100">
-                <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 text-center">
-                    {[
-                        { number: "500+", label: "Clients Served" },
-                        { number: "17+", label: "Years Experience" },
-                        { number: "98%", label: "Success Rate" },
-                        { number: "50+", label: "Healthcare Partners" },
-                    ].map((stat, index) => (
-                        <div key={index} className="transform hover:scale-105 transition">
-                            <div className="text-5xl md:text-6xl font-bold text-[#17ADA1] mb-3">
-                                {stat.number}
+                            {/* Overlay */}
+                            <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-all duration-500 p-6 flex flex-col justify-end text-white">
+                                <h3 className="text-xl font-bold mb-1">{m.name}</h3>
+                                <p className="text-sm text-teal-300 font-medium mb-3">{m.role}</p>
+                                <p className="text-sm leading-relaxed">{m.intro}</p>
                             </div>
-                            <div className="text-gray-600 text-lg font-medium">
-                                {stat.label}
+
+                            {/* Name below image */}
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white p-4 group-hover:opacity-0 transition duration-300">
+                                <h3 className="text-lg font-bold">{m.name}</h3>
+                                <span className="text-sm text-teal-300">{m.role}</span>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </section>
+
+            {/* STATS */}
+            <section className="py-20 px-6 md:px-16 bg-white border-t border-gray-100 bg-gradient-to-b from-white via-white/80 to-[#17ADA1]/40">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 text-center">
+
+    <StatItem number={500} symbol="+" label="Clients Served" />
+    <StatItem number={17} symbol="+" label="Years Experience" />
+    <StatItem number={98} symbol="%" label="Success Rate" />
+    <StatItem number={50} symbol="+" label="Healthcare Partners" />
+
+  </div>
+</section>
 
             {/* CTA */}
             <section className="py-24 px-6 bg-gradient-to-r from-[#17ADA1] to-[#138f85] text-white text-center">

@@ -344,6 +344,7 @@ const AccountingServicesPage = () => {
       </section>
 
       {/* Trusted By */}
+      
      <div className="relative overflow-hidden mt-10">
                  <motion.div
                    className="flex gap-12 md:gap-16 items-center"
@@ -371,6 +372,7 @@ const AccountingServicesPage = () => {
                    ))}
                  </motion.div>
       </div>
+
 
 
       {/* CTA Section */}

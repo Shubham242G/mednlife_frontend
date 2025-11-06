@@ -43,8 +43,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-teal-50 via-teal-200 to-teal-300 flex justify-center items-center px-5 py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0d7c72]/20 via-transparent to-[#0d7c72]/10" />
+    <div className="w-full min-h-screen flex justify-center items-center px-5 py-20 relative overflow-hidden">
+      <div className="absolute inset-0 " />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}

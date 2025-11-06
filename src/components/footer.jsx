@@ -49,9 +49,13 @@ const Footer = () => {
       <ul className="space-y-3 text-sm text-white/80">
         <li><Link to="/service/defence-of-medical-negligence-claims" className="hover:text-[#17ada1]">Defence of Medical Negligence</Link></li>
         <li><Link to="/service/compliance-management" className="hover:text-[#17ada1]">Compliance Management</Link></li>
-        <li><Link to="/service/labor-law-compliance" className="hover:text-[#17ada1]">Labor Law Compliance</Link></li>
+        <li><Link to="/services/labor-law-compliance" className="hover:text-[#17ada1]">Labor Law Compliance</Link></li>
         <li><Link to="/service/licenses-and-renewals" className="hover:text-[#17ada1]">Licenses & Renewals</Link></li>
-        <li><Link to="/service/healthcare-startup-advisory" className="hover:text-[#17ada1]">Healthcare Startup Advisory</Link></li>
+        <li><Link to="/service/healthcare-startup-advisory" className="hover:text-[#17ada1]">Health Startup Advisory</Link></li>
+        <li><Link to="/services/accounting-services" className="hover:text-[#17ada1]">Accounting services</Link></li>
+        <li><Link to="/services/intellectual-property-protection" className="hover:text-[#17ada1]">Intellectual Property</Link></li>
+        <li><Link to="/services/due-diligence-and-valuation" className="hover:text-[#17ada1]">Due Diligence and Valuation</Link></li>
+        <li><Link to="/services/design-and-construction-of-healthcare-facilities" className="hover:text-[#17ada1]">Design and contruction of health facilities</Link></li>
       </ul>
     </div>
 

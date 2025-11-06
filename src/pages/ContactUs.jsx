@@ -88,7 +88,7 @@ const ContactUs = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 px-6 md:px-20 bg-white">
+      <section className="py-20 px-6 md:px-20 bg-white bg-gradient-to-b from-white via-white/80 to-[#17ADA1]/40">
         <ContactForm />
       </section>
     </div>
