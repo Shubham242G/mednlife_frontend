@@ -17,7 +17,6 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
@@ -34,25 +33,25 @@ const Navigation = () => {
         isScrolled ? "bg-black/30 shadow-lg backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <nav className="flex items-center justify-between px-6 md:px-12 lg:px-16 py-5 md:py-6 max-w-[1400px] mx-auto">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 flex-shrink-0">
+      <nav className="flex items-center justify-between px-6  h-20 md:h-24  mx-auto ">
+        {/* Logo - Fixed height container */}
+        <Link to="/" className="flex items-center flex-shrink-0 h-full">
           <img
-            src="/assets/logo.png"
-            alt="Logo"
-            className="w-[140px] md:w-[170px] lg:w-[190px] h-auto transition-all duration-500 brightness-0 invert"
+            src="/assets/white.png"
+            alt="MedNLaw Logo"
+            className="w-[300px] h-[200px] object-contain brightness-0 invert transition-all duration-500"
           />
         </Link>
 
         {/* Desktop Nav Links */}
-        <ul className="hidden md:flex items-center space-x-8 lg:space-x-12 font-medium text-[15px]">
+        <ul className="hidden md:flex items-center space-x-8 lg:space-x-12 font-medium text-[15px] lg:text-[16px]">
           {navLinks.map((link) => (
             <li key={link.to}>
               <Link
                 to={link.to}
-                className={`transition-all duration-300 ${
+                className={`transition-all duration-300 hover:scale-105 ${
                   isActive(link.to)
-                    ? "text-[#17ADA1]"
+                    ? "text-[#17ADA1] font-semibold"
                     : "text-white hover:text-[#17ADA1]"
                 }`}
               >

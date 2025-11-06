@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ExpertiseSection = () => {
 
@@ -111,7 +112,7 @@ const ExpertiseSection = () => {
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => {
-                  const phoneNumber = "+918595650338"; 
+                  const phoneNumber = "+918595650338";
                   const message = "Hi, I'm interested in learning more about your legal services.";
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                   window.open(whatsappUrl, "_blank");
@@ -233,15 +234,35 @@ const ExpertiseSection = () => {
                       transition={{ delay: index * 0.2 + 0.4, duration: 0.6 }}
                       className="flex items-center gap-2 text-white/80 text-sm font-medium group-hover:text-white transition-colors"
                     >
-                      <span>Learn more</span>
-                      <motion.div whileHover={{ x: 4 }} className="w-4 h-4">
-                        →
-                      </motion.div>
                     </motion.div>
                   </div>
                 </div>
               </motion.div>
             ))}
+          </div>
+          <div className="flex justify-center mt-14 md:mt-20">
+            <Link to="/contact-us">
+              <button className="
+      relative
+      bg-[#17ADA1]
+      border-2 border-[#17ADA1] 
+      text-white
+      px-10 sm:px-14 md:px-16 
+      py-4 sm:py-4.5
+      rounded-xl
+      font-semibold
+      text-base sm:text-lg md:text-xl
+      backdrop-blur-md
+      transition-all duration-300
+      hover:bg-[#17ADA1]/15
+      hover:border-[#17ADA1]/80
+      hover:shadow-[0_0_18px_rgba(23,173,161,0.5)]
+      hover:scale-[1.03]
+      tracking-wide
+    ">
+                Get Started Today
+              </button>
+            </Link>
           </div>
         </div>
       </section>

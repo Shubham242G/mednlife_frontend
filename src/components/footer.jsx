@@ -5,24 +5,20 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-teal-800 to-teal-900 text-white py-16 px-6 md:px-16 border-t border-white/10">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<footer className="bg-gradient-to-b from-teal-800 to-teal-900 text-white py-16 px-6 md:px-16 border-t border-white/10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
 
-    {/* Logo & Tagline */}
-    <div>
-      <img
-        src="/assets/white.png"
-        alt="MedNLaw"
-        className="w-80 " // increased from w-40 to w-56
-      />
-      <p className="text-[#17ada1] text-sm font-light tracking-wider mb-4">
-        Rediscovering Strategy
-      </p>
-      <p className="text-white/70 text-sm leading-relaxed max-w-xs">
-        Bridging the gap between medicine and law — empowering healthcare
-        professionals through expert legal counsel and strategy.
-      </p>
-    </div>
+      <div>
+  <img
+    src="/assets/white.png"
+    alt="MedNLaw"
+    className="w-60 mb-4"
+  />
+  <p className="text-white/70 text-sm leading-relaxed max-w-xs">
+    Bridging the gap between medicine and law — empowering healthcare
+    professionals through expert legal counsel and strategy.
+  </p>
+</div>
 
     {/* Office Locations */}
     <div>

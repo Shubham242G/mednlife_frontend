@@ -18,7 +18,7 @@ const partners = [
 <section
   className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
   style={{
-    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundImage: "url('/assets/labour-laws.png')",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
     backgroundPosition: "center",

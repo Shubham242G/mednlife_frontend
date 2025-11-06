@@ -68,7 +68,7 @@ const ComplianceManagementPage = () => {
                   risk costly violations and operational disruptions.
                 </p>
                 <p>
-                  MediLaw provides comprehensive compliance management services that proactively identify risks, 
+                  mednlaw provides comprehensive compliance management services that proactively identify risks, 
                   implement robust compliance programs, conduct regular audits, and ensure your practice stays ahead 
                   of regulatory requirements. We transform compliance from a burden into a strategic advantage.
                 </p>
@@ -98,12 +98,12 @@ const ComplianceManagementPage = () => {
         </div>
       </section>
 
-      {/* Why MediLaw Section */}
+      {/* Why mednlaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MediLaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why mednlaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
-            MediLaw provides the most trusted partner in compliance management for healthcare providers. Our deep 
+            mednlaw provides the most trusted partner in compliance management for healthcare providers. Our deep 
             understanding of healthcare regulations combined with practical compliance experience ensures your practice 
             meets all legal requirements without unnecessary burden. We don&apos;t just tell you what to do—we work alongside 
             you to implement sustainable compliance programs that protect your practice, your patients, and your 
@@ -152,10 +152,10 @@ const ComplianceManagementPage = () => {
         </div>
       </section>
 
-      {/* The MediLaw Approach */}
+      {/* The mednlaw Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MediLaw Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The mednlaw Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -300,7 +300,7 @@ const ComplianceManagementPage = () => {
                   quality care, and maintain the integrity of healthcare delivery.
                 </p>
                 <p className="text-white/95">
-                  MediLaw understands that compliance can feel overwhelming, especially for small and mid-sized 
+                  mednlaw understands that compliance can feel overwhelming, especially for small and mid-sized 
                   practices without dedicated compliance staff. That&apos;s why we&apos;ve developed comprehensive, practical 
                   solutions that make compliance manageable and sustainable.
                 </p>
@@ -354,7 +354,7 @@ const ComplianceManagementPage = () => {
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
             Whether you need guidance on structuring healthcare compliance or maintaining regulatory standards, 
-            MediLaw offers exceptional legal support so you can focus on patient care. From HIPAA requirements 
+            mednlaw offers exceptional legal support so you can focus on patient care. From HIPAA requirements 
             to operational compliance, we&apos;re here to protect your practice and ensure peace of mind.
           </p>
           <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">

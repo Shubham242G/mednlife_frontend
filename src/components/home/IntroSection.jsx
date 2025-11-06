@@ -20,7 +20,7 @@ const IntroSection = () => {
     },
     {
       id: 3,
-      image: "/assets/doctor-and-patients.jpg",
+      image: "/assets/PCPNDT.jpg",
       title: "From PCPNDT compliance to Clinical Trials.",
       subtitle: "We Decipher India’s Healthcare Regulations for You",
     },

@@ -34,7 +34,7 @@ const HealthcareFacilitiesPage = () => {
     </h1>
     <p className="text-lg text-white mb-10 leading-relaxed">
       Navigate the complex regulations and requirements for healthcare facility design and 
-      construction with expert guidance from MediLaw.
+      construction with expert guidance from mednlaw.
     </p>
 
     {/* ✅ CTA from previous components */}
@@ -88,7 +88,7 @@ const HealthcareFacilitiesPage = () => {
                   requirements for infection control, patient safety, staff workflow, and emergency response capabilities.
                 </p>
                 <p>
-                  MediLaw provides comprehensive guidance throughout the design and construction process, helping you 
+                  mednlaw provides comprehensive guidance throughout the design and construction process, helping you 
                   navigate complex regulations, obtain necessary permits, and ensure your facility meets all legal and 
                   operational requirements from concept to completion.
                 </p>
@@ -118,13 +118,13 @@ const HealthcareFacilitiesPage = () => {
         </div>
       </section>
 
-      {/* Why MediLaw Section */}
+      {/* Why mednlaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MediLaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why mednlaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
             Healthcare facility design and construction requires specialized knowledge of medical regulations, building 
-            codes, and operational requirements. MediLaw combines legal expertise with healthcare industry knowledge to 
+            codes, and operational requirements. mednlaw combines legal expertise with healthcare industry knowledge to 
             guide you through every phase of your facility project. Our team ensures compliance with FGI Guidelines, 
             OSHA standards, ADA requirements, and state-specific regulations while helping you create efficient, 
             patient-centered spaces that meet current needs and adapt to future healthcare delivery models.
@@ -173,10 +173,10 @@ const HealthcareFacilitiesPage = () => {
         </div>
       </section>
 
-      {/* The MediLaw Approach */}
+      {/* The mednlaw Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MediLaw Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The mednlaw Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -331,7 +331,7 @@ const HealthcareFacilitiesPage = () => {
                   adaptability.
                 </p>
                 <p className="text-white/95">
-                  MediLaw understands that every healthcare facility is unique, with specific patient populations, 
+                  mednlaw understands that every healthcare facility is unique, with specific patient populations, 
                   clinical workflows, and community needs. Our expertise spans from small private practices to large 
                   hospital systems, ensuring your facility meets current standards while remaining flexible for 
                   future growth.
@@ -387,7 +387,7 @@ const HealthcareFacilitiesPage = () => {
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
             Whether you need guidance on structuring healthcare facilities or navigating complex construction 
-            regulations, MediLaw offers exceptional legal support so you can focus on patient care. From planning 
+            regulations, mednlaw offers exceptional legal support so you can focus on patient care. From planning 
             to completion, we're here to protect your investment and ensure regulatory compliance.
           </p>
           <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">

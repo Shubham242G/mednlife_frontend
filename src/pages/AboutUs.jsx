@@ -197,7 +197,7 @@ const AboutUs = () => {
                         <img
                             src="assets/the_team.jpg"
                             className="rounded-2xl shadow-xl w-full object-cover"
-                            alt="MediLaw Team"
+                            alt="mednlaw Team"
                         />
                         <p className="text-[#17ADA1] font-semibold text-lg mt-5 text-center">
                             Building Healthcare Excellence

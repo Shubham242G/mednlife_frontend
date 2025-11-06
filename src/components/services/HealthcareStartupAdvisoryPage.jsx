@@ -76,7 +76,7 @@ const HealthcareStartupAdvisoryPage = () => {
                   prevents these pitfalls and positions your venture for sustainable growth.
                 </p>
                 <p>
-                  MediLaw specializes in healthcare startup advisory, providing end-to-end support from entity 
+                  mednlaw specializes in healthcare startup advisory, providing end-to-end support from entity 
                   formation through funding rounds, product launches, and market expansion. We combine legal expertise 
                   with deep healthcare industry knowledge to guide your venture through every stage of development.
                 </p>
@@ -106,12 +106,12 @@ const HealthcareStartupAdvisoryPage = () => {
         </div>
       </section>
 
-      {/* Why MediLaw Section */}
+      {/* Why mednlaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MediLaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why mednlaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
-            MediLaw brings unique expertise at the intersection of healthcare law, business strategy, and startup 
+            mednlaw brings unique expertise at the intersection of healthcare law, business strategy, and startup 
             development. We understand both the legal complexities of healthcare regulation and the practical realities 
             of building a startup. Our team has guided numerous healthcare ventures from concept to successful market 
             entry, helping founders avoid common pitfalls while accelerating growth. We don&apos;t just provide legal 
@@ -159,10 +159,10 @@ const HealthcareStartupAdvisoryPage = () => {
         </div>
       </section>
 
-      {/* The MediLaw Approach */}
+      {/* The mednlaw Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MediLaw Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The mednlaw Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -310,7 +310,7 @@ const HealthcareStartupAdvisoryPage = () => {
                   fatal to your venture.
                 </p>
                 <p className="text-white/95">
-                  MediLaw provides comprehensive startup advisory services that combine legal expertise with business 
+                  mednlaw provides comprehensive startup advisory services that combine legal expertise with business 
                   strategy and healthcare industry knowledge. We guide you through entity formation, regulatory 
                   compliance, fundraising, product development, and market launch—ensuring your foundation is solid 
                   and your growth is sustainable.
@@ -366,7 +366,7 @@ const HealthcareStartupAdvisoryPage = () => {
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
             Whether you need guidance on launching your healthcare startup or scaling your existing venture, 
-            MediLaw offers exceptional legal and strategic support so you can focus on innovation and growth. 
+            mednlaw offers exceptional legal and strategic support so you can focus on innovation and growth. 
             From entity formation to market expansion, we&apos;re here to ensure your success.
           </p>
           <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">

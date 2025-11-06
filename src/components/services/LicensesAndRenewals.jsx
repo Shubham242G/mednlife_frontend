@@ -79,7 +79,7 @@ const LicensesRenewalsPage = () => {
                   takes valuable time away from patient care and practice management.
                 </p>
                 <p>
-                  MediLaw streamlines the entire licensing lifecycle, from initial applications through timely 
+                  mednlaw streamlines the entire licensing lifecycle, from initial applications through timely 
                   renewals. We track deadlines, manage documentation, ensure continuing education compliance, and 
                   handle all interactions with licensing boards, allowing you to focus on practicing medicine.
                 </p>
@@ -109,12 +109,12 @@ const LicensesRenewalsPage = () => {
         </div>
       </section>
 
-      {/* Why MediLaw Section */}
+      {/* Why mednlaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MediLaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why mednlaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
-            MediLaw specializes in healthcare licensing and renewals, bringing deep expertise in navigating the complex 
+            mednlaw specializes in healthcare licensing and renewals, bringing deep expertise in navigating the complex 
             regulatory landscape across multiple jurisdictions. We understand the unique requirements for different 
             practice types, specialties, and facility licenses. Our systematic approach ensures no deadline is missed, 
             no requirement overlooked, and no practice disruption occurs. From initial licensure through ongoing 
@@ -162,10 +162,10 @@ const LicensesRenewalsPage = () => {
         </div>
       </section>
 
-      {/* The MediLaw Approach */}
+      {/* The mednlaw Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MediLaw Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The mednlaw Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -310,7 +310,7 @@ const LicensesRenewalsPage = () => {
                   damage your professional reputation.
                 </p>
                 <p className="text-white/95">
-                  MediLaw takes the burden off your shoulders with comprehensive licensing management services. We 
+                  mednlaw takes the burden off your shoulders with comprehensive licensing management services. We 
                   track every license, monitor every deadline, and handle every submission—ensuring your practice 
                   maintains uninterrupted authorization to provide care.
                 </p>
@@ -365,7 +365,7 @@ const LicensesRenewalsPage = () => {
             We are here for you: Every Step of Your Healthcare Compliance Journey
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
-            Whether you need initial licensing support or ongoing renewal management, MediLaw offers exceptional 
+            Whether you need initial licensing support or ongoing renewal management, mednlaw offers exceptional 
             legal support so you can focus on patient care. From tracking deadlines to handling submissions, 
             we&apos;re here to ensure your practice stays fully licensed and compliant.
           </p>
