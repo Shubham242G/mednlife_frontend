@@ -17,12 +17,15 @@ const ChatBot = () => {
       type: "select",
       key: "service",
       options: [
-        "Contested Divorce",
-        "Mutual Divorce",
-        "Child Custody",
-        "Dowry Case / Domestic Violence",
-        "False Dowry & DV Case",
-        "Issue not listed"
+        "Defence of Medical Negligence claims",
+        "Labor Law Compliance",
+        "Due Diligence and valuation",
+        "Design and construction of healthcare facilities",
+        "Intellectual property protection",
+        "Compliance Management",
+        "Licenses & Renewals",
+        "Accounting Services",
+        "Healthcare startup advisory"
       ]
     },
   ];
