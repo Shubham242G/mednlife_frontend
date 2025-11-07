@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const ComplianceManagementPage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -17,7 +18,7 @@ const ComplianceManagementPage = () => {
       <section
         className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
         style={{
-          backgroundImage: "url('/assets/dueDilligencePhoto.jpg')",
+          backgroundImage: "url('/assets/compliance-banner.jpg')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -27,12 +28,14 @@ const ComplianceManagementPage = () => {
             Compliance Management
           </h1>
           <p className="text-lg text-white mb-10 leading-relaxed">
-            Navigate complex healthcare regulations with confidence through comprehensive compliance management 
+            Navigate complex healthcare regulations with confidence through comprehensive compliance management
             solutions tailored to your practice.
           </p>
-          <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Get Started
-          </button>
+          <Link to='/contact-us'>
+            <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
+              Get Started
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -47,29 +50,29 @@ const ComplianceManagementPage = () => {
               </h2>
               <div className="space-y-4 leading-relaxed text-sm">
                 <p>
-                  Compliance management in healthcare involves implementing systematic processes to ensure your 
-                  practice adheres to all applicable federal, state, and local regulations. This encompasses 
-                  HIPAA privacy requirements, billing practices, employment laws, safety standards, and 
+                  Compliance management in healthcare involves implementing systematic processes to ensure your
+                  practice adheres to all applicable federal, state, and local regulations. This encompasses
+                  HIPAA privacy requirements, billing practices, employment laws, safety standards, and
                   accreditation criteria.
                 </p>
                 <p>
-                  Healthcare providers face an increasingly complex regulatory landscape with overlapping requirements 
-                  from multiple agencies including CMS, OCR, OSHA, and state health departments. Non-compliance can 
+                  Healthcare providers face an increasingly complex regulatory landscape with overlapping requirements
+                  from multiple agencies including CMS, OCR, OSHA, and state health departments. Non-compliance can
                   result in significant penalties, legal liability, reputation damage, and even loss of licensure.
                 </p>
                 <p>
-                  Effective compliance management requires ongoing monitoring of regulatory changes, staff training, 
-                  policy development and updates, internal audits, risk assessments, and corrective action plans. 
+                  Effective compliance management requires ongoing monitoring of regulatory changes, staff training,
+                  policy development and updates, internal audits, risk assessments, and corrective action plans.
                   It&apos;s not a one-time project but a continuous commitment to meeting legal and ethical obligations.
                 </p>
                 <p>
-                  Many healthcare practices struggle to maintain compliance due to limited resources, staff turnover, 
-                  and the constantly evolving regulatory environment. Without dedicated compliance expertise, practices 
+                  Many healthcare practices struggle to maintain compliance due to limited resources, staff turnover,
+                  and the constantly evolving regulatory environment. Without dedicated compliance expertise, practices
                   risk costly violations and operational disruptions.
                 </p>
                 <p>
-                  MednLaw provides comprehensive compliance management services that proactively identify risks, 
-                  implement robust compliance programs, conduct regular audits, and ensure your practice stays ahead 
+                  MednLaw provides comprehensive compliance management services that proactively identify risks,
+                  implement robust compliance programs, conduct regular audits, and ensure your practice stays ahead
                   of regulatory requirements. We transform compliance from a burden into a strategic advantage.
                 </p>
               </div>
@@ -83,15 +86,11 @@ const ComplianceManagementPage = () => {
 
             {/* Right Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl overflow-hidden shadow-xl h-[550px] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                    <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <p className="text-teal-700 font-semibold text-lg">Compliance Management</p>
-                </div>
+              <div className=" overflow-hidden h-[450px] flex items-center justify-center">
+
+
+                <img src="/assets/compliance-1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+
               </div>
             </div>
           </div>
@@ -103,19 +102,35 @@ const ComplianceManagementPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
-            MednLaw provides the most trusted partner in compliance management for healthcare providers. Our deep 
-            understanding of healthcare regulations combined with practical compliance experience ensures your practice 
-            meets all legal requirements without unnecessary burden. We don&apos;t just tell you what to do—we work alongside 
-            you to implement sustainable compliance programs that protect your practice, your patients, and your 
-            reputation. From HIPAA compliance to billing practices, we provide comprehensive solutions that keep you 
+            MednLaw provides the most trusted partner in compliance management for healthcare providers. Our deep
+            understanding of healthcare regulations combined with practical compliance experience ensures your practice
+            meets all legal requirements without unnecessary burden. We don&apos;t just tell you what to do—we work alongside
+            you to implement sustainable compliance programs that protect your practice, your patients, and your
+            reputation. From HIPAA compliance to billing practices, we provide comprehensive solutions that keep you
             compliant and focused on patient care.
           </p>
-          <button className="inline-flex items-center bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Schedule a Call
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            className="flex-shrink-0 w-full md:w-auto"
+          >
+            <motion.button
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.96 }}
+              onClick={() => {
+                const phoneNumber = "+918595650338";
+                const message = "Hi, I'm interested in learning more about your legal services.";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, "_blank");
+              }}
+              className="w-full md:w-auto group relative bg-gradient-to-r from-[#17ADA1] to-[#14968C] text-white px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-[#14968C] to-[#0d7c72] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <span className="relative">Schedule a call</span>
+            </motion.button>
+          </motion.div>
         </div>
       </section>
 
@@ -126,7 +141,7 @@ const ComplianceManagementPage = () => {
             <div className="bg-white border-2 border-gray-200 p-6 rounded-xl hover:border-[#17ada1] hover:shadow-xl transition-all duration-300">
               <h3 className="text-lg font-bold text-gray-900 mb-3">Expert Guidance</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Specialized healthcare compliance expertise from professionals who understand medical regulations 
+                Specialized healthcare compliance expertise from professionals who understand medical regulations
                 and practical implementation.
               </p>
             </div>
@@ -165,7 +180,7 @@ const ComplianceManagementPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Evaluation</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Comprehensive assessment of your current compliance status, identifying gaps and areas of risk 
+                Comprehensive assessment of your current compliance status, identifying gaps and areas of risk
                 across all regulatory domains.
               </p>
             </div>
@@ -177,7 +192,7 @@ const ComplianceManagementPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Strategy</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Development of customized compliance strategies and action plans that address your specific needs 
+                Development of customized compliance strategies and action plans that address your specific needs
                 and priorities.
               </p>
             </div>
@@ -189,7 +204,7 @@ const ComplianceManagementPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Research</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Ongoing monitoring of regulatory changes and best practices to keep your compliance program current 
+                Ongoing monitoring of regulatory changes and best practices to keep your compliance program current
                 and effective.
               </p>
             </div>
@@ -201,7 +216,7 @@ const ComplianceManagementPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Systematic rollout of policies, procedures, and training programs to embed compliance throughout 
+                Systematic rollout of policies, procedures, and training programs to embed compliance throughout
                 your organization.
               </p>
             </div>
@@ -241,35 +256,35 @@ const ComplianceManagementPage = () => {
             <div className="border-2 border-gray-200 p-8 rounded-xl hover:border-[#17ada1] hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Regulatory Compliance</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Adherence to federal, state, and local healthcare regulations including CMS requirements, state 
+                Adherence to federal, state, and local healthcare regulations including CMS requirements, state
                 licensing laws, and federal privacy rules.
               </p>
             </div>
             <div className="border-2 border-gray-200 p-8 rounded-xl hover:border-[#17ada1] hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Licensing and Accreditation</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Maintenance of professional licenses, facility certifications, and accreditation standards from 
+                Maintenance of professional licenses, facility certifications, and accreditation standards from
                 bodies like Joint Commission and state boards.
               </p>
             </div>
             <div className="border-2 border-gray-200 p-8 rounded-xl hover:border-[#17ada1] hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Risk Management Compliance</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Implementation of policies and procedures to identify, assess, and mitigate operational and 
+                Implementation of policies and procedures to identify, assess, and mitigate operational and
                 clinical risks across your practice.
               </p>
             </div>
             <div className="border-2 border-gray-200 p-8 rounded-xl hover:border-[#17ada1] hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Patient Data Compliance</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Protection of patient information through HIPAA-compliant policies, security measures, and breach 
+                Protection of patient information through HIPAA-compliant policies, security measures, and breach
                 response protocols.
               </p>
             </div>
             <div className="border-2 border-gray-200 p-8 rounded-xl hover:border-[#17ada1] hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Operational Compliance</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Day-to-day adherence to internal policies, quality standards, and operational protocols that support 
+                Day-to-day adherence to internal policies, quality standards, and operational protocols that support
                 regulatory requirements.
               </p>
             </div>
@@ -281,32 +296,23 @@ const ComplianceManagementPage = () => {
       <section className="py-20 px-4 bg-[#17ada1] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/10 rounded-xl h-96 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                  </svg>
-                </div>
-                <p className="text-white font-semibold text-lg">Compliance Goals</p>
-              </div>
-            </div>
+            <img src='/assets/goals.jpg' className='rounded-md'/>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Your Compliance, Our Commitment</h2>
               <div className="space-y-5 text-sm leading-relaxed">
                 <p className="text-white/95">
-                  Healthcare compliance isn&apos;t just about avoiding penalties—it&apos;s about building a foundation of 
-                  trust, quality, and operational excellence. Every regulation exists to protect patients, ensure 
+                  Healthcare compliance isn&apos;t just about avoiding penalties—it&apos;s about building a foundation of
+                  trust, quality, and operational excellence. Every regulation exists to protect patients, ensure
                   quality care, and maintain the integrity of healthcare delivery.
                 </p>
                 <p className="text-white/95">
-                  MednLaw understands that compliance can feel overwhelming, especially for small and mid-sized 
-                  practices without dedicated compliance staff. That&apos;s why we&apos;ve developed comprehensive, practical 
+                  MednLaw understands that compliance can feel overwhelming, especially for small and mid-sized
+                  practices without dedicated compliance staff. That&apos;s why we&apos;ve developed comprehensive, practical
                   solutions that make compliance manageable and sustainable.
                 </p>
                 <p className="text-white/95">
-                  We don&apos;t just hand you a binder of policies—we become your compliance partner, working alongside 
-                  you to implement systems that work for your practice, train your staff, and maintain ongoing 
+                  We don&apos;t just hand you a binder of policies—we become your compliance partner, working alongside
+                  you to implement systems that work for your practice, train your staff, and maintain ongoing
                   compliance. Your success in compliance is our commitment, and we&apos;re with you every step of the way.
                 </p>
               </div>
@@ -315,34 +321,34 @@ const ComplianceManagementPage = () => {
         </div>
       </section>
 
-      
+
       {/* Trusted By */}
-     <div className="relative overflow-hidden mt-10">
+      <div className="relative overflow-hidden mt-10">
+        <motion.div
+          className="flex gap-12 md:gap-16 items-center"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            duration: 25,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+          {[...partners, ...partners].map((partner, index) => (
             <motion.div
-              className="flex gap-12 md:gap-16 items-center"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                duration: 25,
-                ease: "linear",
-                repeat: Infinity,
-              }}
+              key={index}
+              whileHover={{ scale: 1.1 }}
+              className="flex-shrink-0 w-60 h-40 flex items-center justify-center group"
             >
-              {[...partners, ...partners].map((partner, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.1 }}
-                  className="flex-shrink-0 w-60 h-40 flex items-center justify-center group"
-                >
-                  <div className="relative w-full h-full flex items-center justify-center bg-white rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-[#17ADA1]/30">
-                    <img
-                      src={partner.icon}
-                      alt={`Partner ${partner.id}`}
-                      className="max-h-24 max-w-48 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
-                </motion.div>
-              ))}
+              <div className="relative w-full h-full flex items-center justify-center bg-white rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-[#17ADA1]/30">
+                <img
+                  src={partner.icon}
+                  alt={`Partner ${partner.id}`}
+                  className="max-h-24 max-w-48 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
             </motion.div>
+          ))}
+        </motion.div>
       </div>
 
 
@@ -353,59 +359,18 @@ const ComplianceManagementPage = () => {
             We are here for you: Every Step of Your Healthcare Compliance Journey
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
-            Whether you need guidance on structuring healthcare compliance or maintaining regulatory standards, 
-            MednLaw offers exceptional legal support so you can focus on patient care. From HIPAA requirements 
+            Whether you need guidance on structuring healthcare compliance or maintaining regulatory standards,
+            MednLaw offers exceptional legal support so you can focus on patient care. From HIPAA requirements
             to operational compliance, we&apos;re here to protect your practice and ensure peace of mind.
           </p>
-          <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-            Let&apos;s Connect
-          </button>
-        </div>
-      </section>
-
-      {/* Empower Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl h-[500px] flex items-center justify-center shadow-xl">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <span className="text-teal-700 font-semibold text-lg">Team Collaboration</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empower Your Practice With Real-Time Actionable Insights
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                Stay informed with our compliance management system that provides real-time updates on regulatory 
-                changes, audit findings, and compliance metrics. Our dashboard gives you actionable insights to 
-                maintain compliance effortlessly and demonstrate your commitment to quality care.
-              </p>
-              <form className="space-y-5">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17ada1] focus:border-[#17ada1] text-sm transition-all duration-300"
-                />
-                <button type="submit" className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-                  Sign Up
-                </button>
-              </form>
-            </div>
-          </div>
+          <Link to='/contact-us'>
+            <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              Let&apos;s Connect
+            </button>
+          </Link>
         </div>
       </section>
     </div>

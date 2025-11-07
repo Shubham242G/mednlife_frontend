@@ -18,7 +18,7 @@ const IntellectualPropertyPage = () => {
 <section
   className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
   style={{
-    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundImage: "url('/assets/intellectual-property-banner.jpg')",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -91,15 +91,11 @@ const IntellectualPropertyPage = () => {
 
             {/* Right Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl overflow-hidden shadow-xl h-[550px] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                    <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <p className="text-teal-700 font-semibold text-lg">IP Protection</p>
-                </div>
+              <div className=" overflow-hidden h-[450px] flex items-center justify-center">
+
+
+                <img src="/assets/ip-1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+
               </div>
             </div>
           </div>
@@ -118,12 +114,28 @@ const IntellectualPropertyPage = () => {
             defend against IP infringement. Our expertise ensures your innovations remain protected while you focus 
             on patient care and advancing medical science.
           </p>
-          <button className="inline-flex items-center bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Schedule a Call
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          <motion.div
+                      initial={{ opacity: 0, x: 50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+                      className="flex-shrink-0 w-full md:w-auto"
+                    >
+                      <motion.button
+                        whileHover={{ scale: 1.06 }}
+                        whileTap={{ scale: 0.96 }}
+                        onClick={() => {
+                          const phoneNumber = "+918595650338";
+                          const message = "Hi, I'm interested in learning more about your legal services.";
+                          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                          window.open(whatsappUrl, "_blank");
+                        }}
+                        className="w-full md:w-auto group relative bg-gradient-to-r from-[#17ADA1] to-[#14968C] text-white px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#14968C] to-[#0d7c72] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <span className="relative">Schedule a call</span>
+                      </motion.button>
+                    </motion.div>
         </div>
       </section>
 
@@ -282,41 +294,47 @@ const IntellectualPropertyPage = () => {
 
       {/* Protecting Your Vision Section */}
       <section className="py-20 px-4 bg-[#17ada1] text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/10 rounded-xl h-96 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <p className="text-white font-semibold text-lg">IP Protection Shield</p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">Protecting Your Vision, Safeguarding Your Success</h2>
-              <div className="space-y-5 text-sm leading-relaxed">
-                <p className="text-white/95">
-                  Innovation drives healthcare forward. Whether you've developed a groundbreaking medical device, 
-                  created a unique treatment protocol, or built a recognizable brand, your intellectual property 
-                  represents years of investment, research, and dedication.
-                </p>
-                <p className="text-white/95">
-                  Without proper protection, competitors can replicate your innovations, dilute your brand, or 
-                  misappropriate your research. MednLaw provides comprehensive IP protection that secures your 
-                  competitive advantages while ensuring compliance with healthcare regulations.
-                </p>
-                <p className="text-white/95">
-                  From initial concept through commercialization, we safeguard your intellectual assets with strategic 
-                  patent filings, trademark registrations, licensing agreements, and enforcement actions. Your 
-                  innovations deserve protection—we make sure they get it.
-                </p>
-              </div>
-            </div>
-          </div>
+  <div className="max-w-7xl mx-auto">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      
+      {/* Left Image */}
+      <img
+        src="/assets/ip-2nd.jpg"
+        className="rounded-md w-full h-full object-cover"
+        alt="Medical malpractice"
+      />
+
+      {/* Right Content */}
+      <div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">
+          Protecting Your Vision, Safeguarding Your Success
+        </h2>
+
+        <div className="space-y-5 text-sm leading-relaxed">
+          <p className="text-white/95">
+            Innovation drives healthcare forward. Whether you've developed a groundbreaking medical device, 
+            created a unique treatment protocol, or built a recognizable brand, your intellectual property 
+            represents years of investment, research, and dedication.
+          </p>
+
+          <p className="text-white/95">
+            Without proper protection, competitors can replicate your innovations, dilute your brand, or 
+            misappropriate your research. MednLaw provides comprehensive IP protection that secures your 
+            competitive advantages while ensuring compliance with healthcare regulations.
+          </p>
+
+          <p className="text-white/95">
+            From initial concept through commercialization, we safeguard your intellectual assets with strategic 
+            patent filings, trademark registrations, licensing agreements, and enforcement actions. Your 
+            innovations deserve protection — we make sure they get it.
+          </p>
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
        {/* Trusted By */}
             <section className="py-16 px-4 bg-white">
@@ -361,12 +379,14 @@ const IntellectualPropertyPage = () => {
             MednLaw offers exceptional legal support so you can focus on advancing medical care. From patent 
             applications to trademark enforcement, we're here to protect your intellectual property.
           </p>
-          <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-            Let's Connect
-          </button>
+          <Link to='/contact-us'>
+            <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              Let's Connect
+            </button>
+          </Link>
         </div>
       </section>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckCircle, Shield, Users, Scale, Search, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const DefenceAgainstMedicalNegligence = () => {
   const partners = [
@@ -13,32 +14,34 @@ const DefenceAgainstMedicalNegligence = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-<section
-  className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
-  style={{
-    backgroundImage: "url('/assets/services-banner.jpg')",
-    backgroundAttachment: "fixed",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  {/* ✅ Dark Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/20"></div>
+      <section
+        className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
+        style={{
+          backgroundImage: "url('/assets/steptodown.jpg')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* ✅ Dark Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/20"></div>
 
-  <div className="relative z-10 max-w-4xl mx-auto text-center">
-    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-      Defense Against Medical Negligence
-    </h1>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Defense Against Medical Negligence
+          </h1>
 
-    <p className="text-lg text-white mb-10 leading-relaxed">
-      We offer personalized support and expert legal defense for medical professionals facing medical negligence claims.
-    </p>
+          <p className="text-lg text-white mb-10 leading-relaxed">
+            We offer personalized support and expert legal defense for medical professionals facing medical negligence claims.
+          </p>
+          <Link to='/contact-us'>
 
-    <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-      Let's Connect
-    </button>
-  </div>
-</section>
+            <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
+              Let's Connect
+            </button>
+          </Link>
+        </div>
+      </section>
 
       {/* What are Medical Negligence Claims */}
       <section className="py-20 px-4 bg-white">
@@ -69,13 +72,11 @@ const DefenceAgainstMedicalNegligence = () => {
 
             {/* Right Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl overflow-hidden shadow-xl h-[450px] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                    <Shield className="w-16 h-16 text-teal-600" />
-                  </div>
-                  <p className="text-teal-700 font-semibold text-lg">Medical Defense</p>
-                </div>
+              <div className=" overflow-hidden h-[450px] flex items-center justify-center">
+
+
+                <img src="/assets/services-banner.jpg" className="rounded-md h-[400px] w-full mb-10" />
+
               </div>
             </div>
           </div>
@@ -121,33 +122,33 @@ const DefenceAgainstMedicalNegligence = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { 
-                title: "Prevention", 
+              {
+                title: "Prevention",
                 desc: "Proactive strategies to minimize risk and prevent negligence claims before they arise.",
                 icon: Shield
               },
-              { 
-                title: "Strategy", 
+              {
+                title: "Strategy",
                 desc: "Customized defense strategies tailored to the specific circumstances of your case.",
                 icon: Scale
               },
-              { 
-                title: "Research", 
+              {
+                title: "Research",
                 desc: "Thorough investigation and medical expert consultation to build a strong defense.",
                 icon: Search
               },
-              { 
-                title: "Support", 
+              {
+                title: "Support",
                 desc: "Continuous guidance and emotional support throughout the legal proceedings.",
                 icon: Users
               },
-              { 
-                title: "Communication", 
+              {
+                title: "Communication",
                 desc: "Clear, transparent communication keeping you informed at every stage.",
                 icon: MessageCircle
               },
-              { 
-                title: "Collaboration", 
+              {
+                title: "Collaboration",
                 desc: "Working closely with medical experts and your team to ensure comprehensive defense.",
                 icon: CheckCircle
               },
@@ -197,14 +198,7 @@ const DefenceAgainstMedicalNegligence = () => {
       <section className="py-20 px-4 bg-[#17ada1] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/10 rounded-xl h-96 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Shield className="w-14 h-14 text-white" />
-                </div>
-                <p className="text-white font-semibold text-lg">Complete Defense</p>
-              </div>
-            </div>
+            <img src='/assets/medical-malpractice.jpg' className='rounded-md' />
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 MednLaw Defending Every Claim, Every Step
@@ -226,32 +220,32 @@ const DefenceAgainstMedicalNegligence = () => {
       </section>
 
       {/* Trusted By */}
-     <div className="relative overflow-hidden mt-10">
+      <div className="relative overflow-hidden mt-10">
+        <motion.div
+          className="flex gap-12 md:gap-16 items-center"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            duration: 25,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+          {[...partners, ...partners].map((partner, index) => (
             <motion.div
-              className="flex gap-12 md:gap-16 items-center"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                duration: 25,
-                ease: "linear",
-                repeat: Infinity,
-              }}
+              key={index}
+              whileHover={{ scale: 1.1 }}
+              className="flex-shrink-0 w-60 h-40 flex items-center justify-center group"
             >
-              {[...partners, ...partners].map((partner, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.1 }}
-                  className="flex-shrink-0 w-60 h-40 flex items-center justify-center group"
-                >
-                  <div className="relative w-full h-full flex items-center justify-center bg-white rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-[#17ADA1]/30">
-                    <img
-                      src={partner.icon}
-                      alt={`Partner ${partner.id}`}
-                      className="max-h-24 max-w-48 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
-                </motion.div>
-              ))}
+              <div className="relative w-full h-full flex items-center justify-center bg-white rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-[#17ADA1]/30">
+                <img
+                  src={partner.icon}
+                  alt={`Partner ${partner.id}`}
+                  className="max-h-24 max-w-48 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
             </motion.div>
+          ))}
+        </motion.div>
       </div>
 
 
@@ -264,12 +258,28 @@ const DefenceAgainstMedicalNegligence = () => {
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
             Whether you're facing a medical negligence claim or need proactive risk management guidance, MednLaw offers exceptional legal support so you can focus on patient care. From initial consultation to case resolution, we're here to protect your practice and ensure peace of mind.
           </p>
-          <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            Schedule a Consultation
-          </button>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            className="flex-shrink-0 w-full md:w-auto"
+          >
+            <motion.button
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.96 }}
+              onClick={() => {
+                const phoneNumber = "+918595650338";
+                const message = "Hi, I'm interested in learning more about your legal services.";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, "_blank");
+              }}
+              className="w-full md:w-auto group relative px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden "
+            >
+             
+              <span className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">Schedule a call</span>
+            </motion.button>
+          </motion.div>
         </div>
       </section>
     </div>

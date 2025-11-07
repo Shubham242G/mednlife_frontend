@@ -15,12 +15,15 @@ import ComplianceManagementPage from "./components/services/ComplianceManagement
 import LicensesRenewalsPage from "./components/services/LicensesAndRenewals";
 import AccountingServicesPage from "./components/services/AccountingServices";
 import ChatBot from "./components/bot/bot";
+import ScrollToTop from "./components/scrollToTop";
+import HealthcareStartupAdvisoryPage from "./components/services/HealthcareStartupAdvisoryPage";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Navigation />
-          <Routes>
+        <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<ContactUs />} />
@@ -32,7 +35,7 @@ function App() {
             <Route path="/services/intellectual-property-protection" element={<IntellectualPropertyPage/>} />
             <Route path="/services/compliance-management" element={<ComplianceManagementPage/>} />
             <Route path="/services/licenses-and-renewals" element={<LicensesRenewalsPage/>} />
-            <Route path="/services/healthcare-startup-advisory" element={<HealthcareFacilities/>}/>
+            <Route path="/services/healthcare-startup-advisory" element={<HealthcareStartupAdvisoryPage/>}/>
             <Route path="/services/accounting-services" element={<AccountingServicesPage/>}/>
           </Routes>
         <ChatBot/>

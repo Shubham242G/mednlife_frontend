@@ -1,8 +1,24 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useCountUp = (end, duration = 1500) => {
     const [count, setCount] = useState(0);
+
+    const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const id = location.hash.replace("#", "");
+    const element = document.getElementById(id);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 200); // gives time for page to load
+    }
+  }
+}, [location]);
 
     useEffect(() => {
         let start = 0;
@@ -199,7 +215,7 @@ const AboutUs = () => {
                             className="rounded-2xl shadow-xl w-full object-cover"
                             alt="MednLaw Team"
                         />
-                        <p className="text-[#17ADA1] font-semibold text-lg mt-5 text-center">
+                        <p id="founder" className="text-[#17ADA1] font-semibold text-lg mt-5 text-center">
                             Building Healthcare Excellence
                         </p>
                     </div>
@@ -307,6 +323,7 @@ const AboutUs = () => {
 
             {/* CTA */}
             <section className="py-24 px-6 bg-gradient-to-r from-[#17ADA1] to-[#138f85] text-white text-center">
+                <Link to="/contact-us">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 font-playfair">
                         Ready to Work With Us?
@@ -333,6 +350,7 @@ const AboutUs = () => {
                         </svg>
                     </button>
                 </div>
+                </Link>
             </section>
         </div>
     );

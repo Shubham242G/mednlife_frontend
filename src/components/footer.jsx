@@ -26,7 +26,7 @@ const Footer = () => {
       <ul className="space-y-3 text-sm leading-relaxed text-white/80">
         <li>
           <strong>Delhi Office:</strong><br />
-          Plot No. 7, Fourth Floor, Arihant Nagar, Punjabi Bagh, New Delhi-110026
+          Plot No. 25, Fourth Floor, Thana Road, Near Chhawla Stand, Najafgarh, New Delhi - 110043
         </li>
         <li>
           <strong>Gurgaon Office:</strong><br />
@@ -48,7 +48,7 @@ const Footer = () => {
         <li><Link to="/services/labor-law-compliance" className="hover:text-[#17ada1]">Labor Law Compliance</Link></li>
         <li><Link to="/services/licenses-and-renewals" className="hover:text-[#17ada1]">Licenses & Renewals</Link></li>
         <li><Link to="/services/healthcare-startup-advisory" className="hover:text-[#17ada1]">Health Startup Advisory</Link></li>
-        <li><Link to="/services/accounting-services" className="hover:text-[#17ada1]">Accounting services</Link></li>
+        <li><Link to="/services/accounting-services#accounting-services" className="hover:text-[#17ada1]">Accounting services</Link></li>
         <li><Link to="/services/intellectual-property-protection" className="hover:text-[#17ada1]">Intellectual Property</Link></li>
         <li><Link to="/services/due-diligence-and-valuation" className="hover:text-[#17ada1]">Due Diligence and Valuation</Link></li>
         <li><Link to="/services/design-and-construction-of-healthcare-facilities" className="hover:text-[#17ada1]">Design and contruction of health facilities</Link></li>

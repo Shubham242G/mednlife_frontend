@@ -19,7 +19,7 @@ const HealthcareFacilitiesPage = () => {
 <section
   className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
   style={{
-    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundImage: "url('/assets/healthcare-back.jpg')",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -101,17 +101,14 @@ const HealthcareFacilitiesPage = () => {
               </button>
             </div>
 
+          
             {/* Right Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl overflow-hidden shadow-xl h-[550px] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                    <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <p className="text-teal-700 font-semibold text-lg">Healthcare Facility</p>
-                </div>
+              <div className=" overflow-hidden h-[450px] flex items-center justify-center">
+
+
+                <img src="/assets/healthcare-1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+
               </div>
             </div>
           </div>
@@ -129,12 +126,28 @@ const HealthcareFacilitiesPage = () => {
             OSHA standards, ADA requirements, and state-specific regulations while helping you create efficient, 
             patient-centered spaces that meet current needs and adapt to future healthcare delivery models.
           </p>
-          <button className="inline-flex items-center bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Schedule a Call
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          <motion.div
+                      initial={{ opacity: 0, x: 50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+                      className="flex-shrink-0 w-full md:w-auto"
+                    >
+                      <motion.button
+                        whileHover={{ scale: 1.06 }}
+                        whileTap={{ scale: 0.96 }}
+                        onClick={() => {
+                          const phoneNumber = "+918595650338";
+                          const message = "Hi, I'm interested in learning more about your legal services.";
+                          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                          window.open(whatsappUrl, "_blank");
+                        }}
+                        className="w-full md:w-auto group relative bg-gradient-to-r from-[#17ADA1] to-[#14968C] text-white px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#14968C] to-[#0d7c72] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <span className="relative">Schedule a call</span>
+                      </motion.button>
+                    </motion.div>
         </div>
       </section>
 
@@ -309,43 +322,43 @@ const HealthcareFacilitiesPage = () => {
 
       {/* Designing The Future Section */}
       <section className="py-20 px-4 bg-[#17ada1] text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/10 rounded-xl h-96 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-                <p className="text-white font-semibold text-lg">Healthcare Construction</p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">Designing The Future of Healthcare Facilities</h2>
-              <div className="space-y-5 text-sm leading-relaxed">
-                <p className="text-white/95">
-                  Modern healthcare facilities must balance multiple priorities: patient safety, operational efficiency, 
-                  regulatory compliance, and healing environments. The design and construction process requires 
-                  meticulous attention to infection control, accessibility, technology integration, and future 
-                  adaptability.
-                </p>
-                <p className="text-white/95">
-                  MednLaw understands that every healthcare facility is unique, with specific patient populations, 
-                  clinical workflows, and community needs. Our expertise spans from small private practices to large 
-                  hospital systems, ensuring your facility meets current standards while remaining flexible for 
-                  future growth.
-                </p>
-                <p className="text-white/95">
-                  We navigate the complex landscape of building codes, healthcare regulations, and accreditation 
-                  requirements, allowing you to focus on your mission of providing excellent patient care in a 
-                  safe, efficient, and welcoming environment.
-                </p>
-              </div>
-            </div>
-          </div>
+  <div className="max-w-7xl mx-auto">
+    
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <img src="/assets/healthcare-2nd.jpg" className="rounded-md" alt="Healthcare Facility" />
+
+      <div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">
+          Designing The Future of Healthcare Facilities
+        </h2>
+
+        <div className="space-y-5 text-sm leading-relaxed">
+          <p className="text-white/95">
+            Modern healthcare facilities must balance multiple priorities: patient safety, operational
+            efficiency, regulatory compliance, and healing environments. The design and construction process 
+            requires meticulous attention to infection control, accessibility, technology integration, and 
+            future adaptability.
+          </p>
+
+          <p className="text-white/95">
+            MednLaw understands that every healthcare facility is unique, with specific patient populations, 
+            clinical workflows, and community needs. Our expertise spans from small private practices to 
+            large hospital systems, ensuring your facility meets current standards while remaining flexible 
+            for future growth.
+          </p>
+
+          <p className="text-white/95">
+            We navigate the complex landscape of building codes, healthcare regulations, and accreditation 
+            requirements, allowing you to focus on your mission of providing excellent patient care in a 
+            safe, efficient, and welcoming environment.
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
 
       {/* Trusted By */}
       <section className="py-16 px-4 bg-white">
@@ -390,12 +403,14 @@ const HealthcareFacilitiesPage = () => {
             regulations, MednLaw offers exceptional legal support so you can focus on patient care. From planning 
             to completion, we're here to protect your investment and ensure regulatory compliance.
           </p>
+          <Link to='/contact-us'>
           <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
             Let's Connect
           </button>
+          </Link>
         </div>
       </section>
     </div>

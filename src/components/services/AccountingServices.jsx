@@ -14,6 +14,7 @@ const AccountingServicesPage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
        <section
+       id='accounting-services'
         className="relative w-full min-h-[60vh] bg-cover bg-center flex items-center"
         style={{
           backgroundImage: "url('/assets/services-banner.jpg')",
@@ -133,12 +134,28 @@ const AccountingServicesPage = () => {
             that helps you optimize revenue, control costs, and make informed business decisions. We don&apos;t just 
             manage your books—we become a trusted financial partner invested in your practice&apos;s success and growth.
           </p>
-          <button className="inline-flex items-center bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Schedule a Call
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+                        className="flex-shrink-0 w-full md:w-auto"
+                      >
+                        <motion.button
+                          whileHover={{ scale: 1.06 }}
+                          whileTap={{ scale: 0.96 }}
+                          onClick={() => {
+                            const phoneNumber = "+918595650338";
+                            const message = "Hi, I'm interested in learning more about your legal services.";
+                            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                            window.open(whatsappUrl, "_blank");
+                          }}
+                          className="w-full md:w-auto group relative bg-gradient-to-r from-[#17ADA1] to-[#14968C] text-white px-8 md:px-12 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-r from-[#14968C] to-[#0d7c72] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                          <span className="relative">Schedule a call</span>
+                        </motion.button>
+                      </motion.div>
         </div>
       </section>
 
@@ -307,16 +324,7 @@ const AccountingServicesPage = () => {
       <section className="py-20 px-4 bg-[#17ada1] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/10 rounded-xl h-96 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <p className="text-white font-semibold text-lg">Financial Excellence</p>
-              </div>
-            </div>
+            <img src='/assets/goals.jpg' className='rounded-md'/>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Where Healthcare Meets Finance</h2>
               <div className="space-y-5 text-sm leading-relaxed">
@@ -386,12 +394,14 @@ const AccountingServicesPage = () => {
             exceptional financial support so you can focus on patient care. From bookkeeping to financial 
             planning, we&apos;re here to ensure your practice&apos;s financial health and success.
           </p>
+          <Link to='/contact-us'>
           <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
             Let&apos;s Connect
           </button>
+          </Link>
         </div>
       </section>
 

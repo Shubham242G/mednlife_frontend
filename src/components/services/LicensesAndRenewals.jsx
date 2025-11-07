@@ -17,7 +17,7 @@ const LicensesRenewalsPage = () => {
 <section
   className="relative w-full bg-cover bg-center overflow-hidden pt-28 pb-20 px-4"
   style={{
-    backgroundImage: "url('/assets/services-banner.jpg')",
+    backgroundImage: "url('/assets/liscense-banner.jpg')",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -94,15 +94,11 @@ const LicensesRenewalsPage = () => {
 
             {/* Right Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl overflow-hidden shadow-xl h-[550px] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                    <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <p className="text-teal-700 font-semibold text-lg">License & Certification</p>
-                </div>
+              <div className=" overflow-hidden h-[450px] flex items-center justify-center">
+
+
+                <img src="/assets/liscence-1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+
               </div>
             </div>
           </div>
@@ -121,12 +117,20 @@ const LicensesRenewalsPage = () => {
             renewals and expansion into new states, we provide comprehensive support that gives you peace of mind and 
             allows you to focus entirely on patient care.
           </p>
-          <button className="inline-flex items-center bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
-            Schedule a Call
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+         <motion.div
+               initial={{ opacity: 0, scale: 0.9 }}
+               animate={{ opacity: 1, scale: 1 }}
+               transition={{ duration: 0.6, delay: 0.4 }}
+               className="relative w-fit mx-auto"
+             >
+               <div className="absolute -inset-2 bg-[#17ADA1] rounded-lg blur-xl opacity-40 animate-pulse" />
+         
+               <Link to="/contact-us">
+                 <button className="relative bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02] whitespace-nowrap">
+                   Get Started Today
+                 </button>
+               </Link>
+             </motion.div>
         </div>
       </section>
 
@@ -289,41 +293,55 @@ const LicensesRenewalsPage = () => {
 
       {/* Your Licensing Partner Section */}
       <section className="py-20 px-4 bg-[#17ada1] text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/10 rounded-xl h-96 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <p className="text-white font-semibold text-lg">Licensed & Certified</p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">Your Licensing Partner, Every Step Of The Way</h2>
-              <div className="space-y-5 text-sm leading-relaxed">
-                <p className="text-white/95">
-                  Healthcare licensing is complex, time-consuming, and critical to your ability to practice. Missing 
-                  a renewal deadline or filing incomplete documentation can halt operations, jeopardize revenue, and 
-                  damage your professional reputation.
-                </p>
-                <p className="text-white/95">
-                  MednLaw takes the burden off your shoulders with comprehensive licensing management services. We 
-                  track every license, monitor every deadline, and handle every submission—ensuring your practice 
-                  maintains uninterrupted authorization to provide care.
-                </p>
-                <p className="text-white/95">
-                  From initial licensure through multi-state expansion and ongoing renewals, we serve as your 
-                  dedicated licensing partner. Our systematic approach, regulatory expertise, and proactive 
-                  communication give you confidence that your credentials are always current and compliant.
-                </p>
-              </div>
-            </div>
-          </div>
+  <div className="max-w-7xl mx-auto">
+    
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+
+      {/* Left Box */}
+      <div className=" h-96 flex items-center justify-center backdrop-blur-sm">
+        <div className="text-center p-8">
+
+          
+            <img 
+              src="/assets/healthcare-2nd.jpg" 
+              className="rounded-md" 
+              alt="Healthcare Facility" 
+            />
+            
+
         </div>
-      </section>
+      </div>
+
+      {/* Right Content */}
+      <div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">
+          Your Licensing Partner, Every Step Of The Way
+        </h2>
+
+        <div className="space-y-5 text-sm leading-relaxed">
+          <p className="text-white/95">
+            Healthcare licensing is complex, time-consuming, and critical to your ability to practice. Missing 
+            a renewal deadline or filing incomplete documentation can halt operations, jeopardize revenue, and 
+            damage your professional reputation.
+          </p>
+          <p className="text-white/95">
+            MednLaw takes the burden off your shoulders with comprehensive licensing management services. We 
+            track every license, monitor every deadline, and handle every submission—ensuring your practice 
+            maintains uninterrupted authorization to provide care.
+          </p>
+          <p className="text-white/95">
+            From initial licensure through multi-state expansion and ongoing renewals, we serve as your 
+            dedicated licensing partner. Our systematic approach, regulatory expertise, and proactive 
+            communication give you confidence that your credentials are always current and compliant.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
       {/* Trusted By */}
             <section className="py-16 px-4 bg-white">
@@ -369,12 +387,14 @@ const LicensesRenewalsPage = () => {
             legal support so you can focus on patient care. From tracking deadlines to handling submissions, 
             we&apos;re here to ensure your practice stays fully licensed and compliant.
           </p>
+          <Link to='/contact-us'>
           <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
             Let&apos;s Connect
           </button>
+          </Link>
         </div>
       </section>
     </div>
