@@ -17,6 +17,7 @@ import AccountingServicesPage from "./components/services/AccountingServices";
 import ChatBot from "./components/bot/bot";
 import ScrollToTop from "./components/scrollToTop";
 import HealthcareStartupAdvisoryPage from "./components/services/HealthcareStartupAdvisoryPage";
+import ContactForm from "./components/home/Contact";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactForm/>} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/services" element={<ServicesSection/>}/>
             <Route path="/services/defence-of-medical-negligence-claims" element={<DefenceAgainstMedicalNegligence />} /> 

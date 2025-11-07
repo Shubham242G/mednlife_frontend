@@ -241,7 +241,7 @@ const ExpertiseSection = () => {
             ))}
           </div>
           <div className="flex justify-center mt-14 md:mt-20">
-            <Link to="/contact-us">
+            <Link to="/contact">
               <button className="
       relative
       bg-[#17ADA1]

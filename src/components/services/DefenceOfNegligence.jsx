@@ -34,7 +34,7 @@ const DefenceAgainstMedicalNegligence = () => {
           <p className="text-lg text-white mb-10 leading-relaxed">
             We offer personalized support and expert legal defense for medical professionals facing medical negligence claims.
           </p>
-          <Link to='/contact-us'>
+          <Link to='/contact'>
 
             <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
               Let's Connect

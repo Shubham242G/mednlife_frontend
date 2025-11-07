@@ -31,7 +31,7 @@ const ComplianceManagementPage = () => {
             Navigate complex healthcare regulations with confidence through comprehensive compliance management
             solutions tailored to your practice.
           </p>
-          <Link to='/contact-us'>
+          <Link to='/contact'>
             <button className="bg-[#0f766e] hover:bg-[#0d9488] text-white px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
               Get Started
             </button>
@@ -363,7 +363,7 @@ const ComplianceManagementPage = () => {
             MednLaw offers exceptional legal support so you can focus on patient care. From HIPAA requirements
             to operational compliance, we&apos;re here to protect your practice and ensure peace of mind.
           </p>
-          <Link to='/contact-us'>
+          <Link to='/contact'>
             <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />

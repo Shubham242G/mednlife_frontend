@@ -69,7 +69,7 @@ const ChatBot = () => {
 
   const handleWhatsAppRedirect = () => {
     const msg = `Hi, here are my details:\nName: ${answers.name}\nEmail: ${answers.email}\nService: ${answers.service}`;
-    window.open(`https://wa.me/919266877791?text=${encodeURIComponent(msg)}`);
+    window.open(`https://wa.me/+918595650338?text=${encodeURIComponent(msg)}`);
   };
 
   const resetChat = () => {

@@ -190,7 +190,7 @@ const IntroSection = () => {
             className="relative w-full sm:w-auto"
           >
             <div className="absolute -inset-1 sm:-inset-1.5 md:-inset-2 bg-[#17ADA1] rounded-lg blur-lg md:blur-xl opacity-40 animate-pulse" />
-            <Link to="/contact-us">
+            <Link to="/contact">
               <button className="relative w-full sm:w-auto bg-transparent border-2 border-[#17ADA1] text-white px-6 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-3.5 lg:px-10 lg:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg backdrop-blur-sm hover:bg-[#17ADA1]/20 transition-all duration-300 shadow-lg hover:scale-[1.02]">
                 Get Started Today
               </button>
