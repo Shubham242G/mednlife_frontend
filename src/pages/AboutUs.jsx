@@ -197,7 +197,7 @@ const AboutUs = () => {
                         <img
                             src="assets/the_team.jpg"
                             className="rounded-2xl shadow-xl w-full object-cover"
-                            alt="mednlaw Team"
+                            alt="MednLaw Team"
                         />
                         <p className="text-[#17ADA1] font-semibold text-lg mt-5 text-center">
                             Building Healthcare Excellence
@@ -206,7 +206,7 @@ const AboutUs = () => {
                 </div>
 
                 {/* Founder  */}
-                <div className="max-w-6xl mx-auto px-6 md:px-10 flex flex-col lg:flex-row items-center lg:gap-16 gap-10 mb-20 mt-20">
+                <div id="founder" className="max-w-6xl mx-auto px-6 md:px-10 flex flex-col lg:flex-row items-center lg:gap-16 gap-10 mb-20 mt-20">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}

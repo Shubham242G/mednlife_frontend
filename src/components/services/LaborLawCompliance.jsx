@@ -57,7 +57,7 @@ const partners = [
 </section>
 
 
-      {/* Why MednLife Content Section */}
+      {/* Why MednLaw Content Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -80,7 +80,7 @@ const partners = [
                 </p>
                 <p>
                   Many small businesses and medical practices don't have internal HR departments or dedicated compliance 
-                  teams. MednLife simplifies labor law compliance so they can focus on providing excellent care and 
+                  teams. MednLaw simplifies labor law compliance so they can focus on providing excellent care and 
                   building their business.
                 </p>
               </div>
@@ -109,10 +109,10 @@ const partners = [
         </div>
       </section>
 
-      {/* Why MednLife Section */}
+      {/* Why MednLaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLife?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
             Labor laws protect your practice and employees. We navigate federal and state requirements, from wage 
             regulations to anti-discrimination policies. Trusted labor specialists provide expert guidance so you 
@@ -159,10 +159,10 @@ const partners = [
         </div>
       </section>
 
-      {/* The MednLife Approach */}
+      {/* The MednLaw Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MednLife Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MednLaw Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -304,7 +304,7 @@ const partners = [
                   their commitment through fair treatment, safe conditions, and legal protection.
                 </p>
                 <p className="text-white/95">
-                  MednLife ensures that your practice complies with labor laws while fostering a positive work environment. 
+                  MednLaw ensures that your practice complies with labor laws while fostering a positive work environment. 
                   We help you navigate complex regulations so you can focus on what matters most: delivering exceptional 
                   patient care.
                 </p>
@@ -356,7 +356,7 @@ const partners = [
             We are here for you: Every Step of Your Healthcare Compliance Journey
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
-            Whether you need guidance on structuring healthcare compliance or updating your forms, MednLife offers 
+            Whether you need guidance on structuring healthcare compliance or updating your forms, MednLaw offers 
             exceptional legal support so you can focus on patient care. From HIPAA requirements to labor law compliance, 
             we're here to protect you.
           </p>

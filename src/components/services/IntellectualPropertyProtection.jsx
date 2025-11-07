@@ -76,7 +76,7 @@ const IntellectualPropertyPage = () => {
                   licensing agreements with institutions and partners.
                 </p>
                 <p>
-                  mednlaw specializes in healthcare IP protection, helping medical professionals identify protectable 
+                  MednLaw specializes in healthcare IP protection, helping medical professionals identify protectable 
                   assets, file appropriate applications, enforce IP rights, and defend against infringement. We ensure 
                   your innovations remain exclusively yours while maintaining compliance with healthcare regulations.
                 </p>
@@ -106,13 +106,13 @@ const IntellectualPropertyPage = () => {
         </div>
       </section>
 
-      {/* Why mednlaw Section */}
+      {/* Why MednLaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why mednlaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
             Protecting intellectual property in healthcare requires specialized legal knowledge that bridges medical 
-            innovation and IP law. mednlaw's team understands both the technical aspects of medical innovations and 
+            innovation and IP law. MednLaw's team understands both the technical aspects of medical innovations and 
             the legal frameworks protecting them. We've helped countless healthcare providers secure patents for 
             medical devices, protect proprietary treatment methods, register trademarks for their practices, and 
             defend against IP infringement. Our expertise ensures your innovations remain protected while you focus 
@@ -159,10 +159,10 @@ const IntellectualPropertyPage = () => {
         </div>
       </section>
 
-      {/* The mednlaw Approach */}
+      {/* The MednLaw Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The mednlaw Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MednLaw Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -304,7 +304,7 @@ const IntellectualPropertyPage = () => {
                 </p>
                 <p className="text-white/95">
                   Without proper protection, competitors can replicate your innovations, dilute your brand, or 
-                  misappropriate your research. mednlaw provides comprehensive IP protection that secures your 
+                  misappropriate your research. MednLaw provides comprehensive IP protection that secures your 
                   competitive advantages while ensuring compliance with healthcare regulations.
                 </p>
                 <p className="text-white/95">
@@ -358,7 +358,7 @@ const IntellectualPropertyPage = () => {
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
             Whether you need guidance on protecting healthcare innovations or defending against IP infringement, 
-            mednlaw offers exceptional legal support so you can focus on advancing medical care. From patent 
+            MednLaw offers exceptional legal support so you can focus on advancing medical care. From patent 
             applications to trademark enforcement, we're here to protect your intellectual property.
           </p>
           <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">

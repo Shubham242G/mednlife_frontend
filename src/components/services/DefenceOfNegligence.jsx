@@ -55,7 +55,7 @@ const DefenceAgainstMedicalNegligence = () => {
                   These claims can be complex, involving medical, ethical, and legal aspects.
                 </p>
                 <p>
-                  At mednlaw, we help doctors, hospitals, and healthcare providers
+                  At MednLaw, we help doctors, hospitals, and healthcare providers
                   defend themselves against false or exaggerated allegations, ensuring their professional reputation remains protected.
                 </p>
               </div>
@@ -82,12 +82,12 @@ const DefenceAgainstMedicalNegligence = () => {
         </div>
       </section>
 
-      {/* Why mednlaw Section */}
+      {/* Why MednLaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why mednlaw?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
-            Facing medical negligence claims can drain time, money, and confidence. mednlaw provides expert defense, compassionate support, and a proven record
+            Facing medical negligence claims can drain time, money, and confidence. MednLaw provides expert defense, compassionate support, and a proven record
             in protecting healthcare professionals across India.
           </p>
 
@@ -113,11 +113,11 @@ const DefenceAgainstMedicalNegligence = () => {
         </div>
       </section>
 
-      {/* The mednlaw Approach */}
+      {/* The MednLaw Approach */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            The mednlaw Approach
+            The MednLaw Approach
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -207,7 +207,7 @@ const DefenceAgainstMedicalNegligence = () => {
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                mednlaw Defending Every Claim, Every Step
+                MednLaw Defending Every Claim, Every Step
               </h2>
               <div className="space-y-5 text-sm leading-relaxed">
                 <p className="text-white/95">
@@ -217,7 +217,7 @@ const DefenceAgainstMedicalNegligence = () => {
                   Our expert legal team offers comprehensive defense against all types of medical negligence claims. We understand the medical, legal, and ethical complexities involved and provide strategic defense tailored to your specific situation.
                 </p>
                 <p className="text-white/95">
-                  Protect your practice, preserve your reputation, and ensure peace of mind with mednlaw by your side through every stage of the legal process.
+                  Protect your practice, preserve your reputation, and ensure peace of mind with MednLaw by your side through every stage of the legal process.
                 </p>
               </div>
             </div>
@@ -262,7 +262,7 @@ const DefenceAgainstMedicalNegligence = () => {
             We are here for you: Every Step of Your Healthcare Defense Journey
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
-            Whether you're facing a medical negligence claim or need proactive risk management guidance, mednlaw offers exceptional legal support so you can focus on patient care. From initial consultation to case resolution, we're here to protect your practice and ensure peace of mind.
+            Whether you're facing a medical negligence claim or need proactive risk management guidance, MednLaw offers exceptional legal support so you can focus on patient care. From initial consultation to case resolution, we're here to protect your practice and ensure peace of mind.
           </p>
           <button className="bg-white hover:bg-gray-100 text-[#17ada1] px-10 py-4 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-xl inline-flex items-center">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

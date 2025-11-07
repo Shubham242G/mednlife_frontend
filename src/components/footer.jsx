@@ -70,10 +70,10 @@ const Footer = () => {
         </li>
         <li>
           <a
-            href="mailto:info@mednlaw.in"
+            href="mailto:info@MednLaw.in"
             className="hover:text-[#17ada1]"
           >
-            info@mednlaw.in
+            info@MednLaw.in
           </a>
         </li>
         <li className="flex gap-4 mt-4">
@@ -86,7 +86,7 @@ const Footer = () => {
             <Linkedin size={20} />
           </a>
           <a
-            href="https://www.instagram.com/official_mednlaw?igsh=MWlza3liMTBpYTNjZA=="
+            href="https://www.instagram.com/official_MednLaw?igsh=MWlza3liMTBpYTNjZA=="
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#17ada1]"

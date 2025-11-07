@@ -90,7 +90,7 @@ const AccountingServicesPage = () => {
                   systems can lead to cash flow problems, compliance violations, and missed growth opportunities.
                 </p>
                 <p>
-                  MednLife provides comprehensive accounting services designed specifically for healthcare providers. 
+                  MednLaw provides comprehensive accounting services designed specifically for healthcare providers. 
                   We combine financial expertise with deep understanding of medical practice operations, ensuring 
                   accurate bookkeeping, timely reporting, tax optimization, and strategic financial guidance that 
                   supports your practice&apos;s success.
@@ -121,12 +121,12 @@ const AccountingServicesPage = () => {
         </div>
       </section>
 
-      {/* Why MednLife Section */}
+      {/* Why MednLaw Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLife?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why MednLaw?</h2>
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10 text-base">
-            MednLife brings specialized expertise in healthcare accounting, combining financial acumen with deep 
+            MednLaw brings specialized expertise in healthcare accounting, combining financial acumen with deep 
             understanding of medical practice operations and regulatory requirements. We understand the unique 
             challenges healthcare providers face—from complex insurance reimbursements to healthcare-specific tax 
             considerations. Our team provides accurate, timely financial services while offering strategic guidance 
@@ -176,10 +176,10 @@ const AccountingServicesPage = () => {
         </div>
       </section>
 
-      {/* The MednLife Approach */}
+      {/* The MednLaw Approach */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MednLife Approach</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">The MednLaw Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
@@ -326,7 +326,7 @@ const AccountingServicesPage = () => {
                   compliance, medical practices face financial challenges that demand specialized knowledge.
                 </p>
                 <p className="text-white/95">
-                  MednLife bridges this gap with comprehensive accounting services designed specifically for 
+                  MednLaw bridges this gap with comprehensive accounting services designed specifically for 
                   healthcare providers. We understand the financial intricacies of medical practices—from revenue 
                   cycle management to healthcare-specific tax considerations—and provide accurate, timely financial 
                   services that support your operational success.
@@ -382,7 +382,7 @@ const AccountingServicesPage = () => {
             We are here for you: Every Step of Your Healthcare Compliance Journey
           </h2>
           <p className="text-white/95 leading-relaxed text-base mb-10 max-w-3xl mx-auto">
-            Whether you need comprehensive accounting services or strategic financial guidance, MednLife offers 
+            Whether you need comprehensive accounting services or strategic financial guidance, MednLaw offers 
             exceptional financial support so you can focus on patient care. From bookkeeping to financial 
             planning, we&apos;re here to ensure your practice&apos;s financial health and success.
           </p>

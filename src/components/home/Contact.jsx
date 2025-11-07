@@ -55,7 +55,7 @@ const ContactForm = () => {
       >
         <div className="text-center mb-12">
           <motion.span className="inline-block text-[#17ada1] text-xs font-bold tracking-[0.3em] uppercase mb-4">
-            Contact MediLaw
+            Contact mednlaw
           </motion.span>
           <h1 className="text-[#17ada1] text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Let's discuss your healthcare legal needs
