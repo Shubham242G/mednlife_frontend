@@ -67,7 +67,7 @@ const Footer = () => {
             <a href="tel:8596505338" className="hover:text-[#17ada1]"> 8596505338</a>
           </li>
           <li>
-            <a href="mailto:info@mednlaw.com" className="hover:text-[#17ada1]">info@mednlaw.in</a>
+            <a href="mailto:info@mednlaw.com" className="hover:text-[#17ada1]">info@mednlaw.com</a>
           </li>
           <li className="flex justify-center md:justify-start gap-4 mt-4">
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#17ada1]"><Linkedin size={20} /></a>
