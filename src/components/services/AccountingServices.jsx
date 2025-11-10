@@ -314,7 +314,7 @@ const AccountingServicesPage = () => {
       <section className="py-20 px-4 bg-[#17ada1] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <img src='/assets/goals.jpg' className='rounded-md' alt='Image'/>
+            <img src='/assets/goals.jpg' className='rounded-md' alt='service-picture'/>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Where Healthcare Meets Finance</h2>
               <div className="space-y-5 text-sm leading-relaxed">

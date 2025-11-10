@@ -100,7 +100,7 @@ const HealthcareFacilitiesPage = () => {
               <div className=" overflow-hidden h-[450px] flex items-center justify-center">
 
 
-                <img src="/assets/healthcare-1st.jpg" className="rounded-md h-[400px] w-full mb-10" alt='Image'/>
+                <img src="/assets/healthcare-1st.jpg" className="rounded-md h-[400px] w-full mb-10" alt='service-picture'/>
 
               </div>
             </div>

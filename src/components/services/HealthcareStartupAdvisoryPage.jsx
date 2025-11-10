@@ -88,7 +88,7 @@ const HealthcareStartupAdvisoryPage = () => {
               <div className=" overflow-hidden h-[450px] flex items-center justify-center">
 
 
-                <img src="/assets/DandC1st.jpg" className="rounded-md h-[400px] w-full mb-10"alt='Image' />
+                <img src="/assets/DandC1st.jpg" className="rounded-md h-[400px] w-full mb-10" alt='service-picture' />
 
               </div>
             </div>
@@ -296,7 +296,7 @@ const HealthcareStartupAdvisoryPage = () => {
       <section className="py-20 px-4 bg-[#17ada1] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <img src='/assets/healthcare-startup-2nd.png' className='rounded-md'/>
+            <img src='/assets/healthcare-startup-2nd.png' className='rounded-md' alt='service-picture'/>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Empowering Your Healthcare Startup at Every Stage</h2>
               <div className="space-y-5 text-sm leading-relaxed">
