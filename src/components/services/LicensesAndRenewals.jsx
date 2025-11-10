@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +8,7 @@ const LicensesRenewalsPage = () => {
     { id: 3, icon: "/assets/brand4.png" },
     { id: 4, icon: "/assets/brand5.png" },
   ];
-  const [openFAQ, setOpenFAQ] = useState(null);
+  
 
   return (
     <div className="min-h-screen bg-white">
