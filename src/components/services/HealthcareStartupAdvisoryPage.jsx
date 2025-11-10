@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 const HealthcareStartupAdvisoryPage = () => {
-  const [openFAQ, setOpenFAQ] = useState(null);
+
 
   const partners = [
     { id: 1, icon: "/assets/brand1.png" },
@@ -88,7 +88,7 @@ const HealthcareStartupAdvisoryPage = () => {
               <div className=" overflow-hidden h-[450px] flex items-center justify-center">
 
 
-                <img src="/assets/DandC1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+                <img src="/assets/DandC1st.jpg" className="rounded-md h-[400px] w-full mb-10"alt='Image' />
 
               </div>
             </div>

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 const ComplianceManagementPage = () => {
-  const [openFAQ, setOpenFAQ] = useState(null);
+ 
 
 
   const partners = [
@@ -66,7 +66,7 @@ const ComplianceManagementPage = () => {
               <div className=" overflow-hidden h-[450px] flex items-center justify-center">
 
 
-                <img src="/assets/compliance-1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+                <img src="/assets/compliance-1st.jpg" className="rounded-md h-[400px] w-full mb-10" alt='Image'/>
 
               </div>
             </div>

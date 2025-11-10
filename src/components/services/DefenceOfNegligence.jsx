@@ -69,7 +69,7 @@ const DefenceAgainstMedicalNegligence = () => {
               <div className=" overflow-hidden h-[450px] flex items-center justify-center">
 
 
-                <img src="/assets/services-banner.jpg" className="rounded-md h-[400px] w-full mb-10" />
+                <img src="/assets/services-banner.jpg" className="rounded-md h-[400px] w-full mb-10" alt='Image'/>
 
               </div>
             </div>

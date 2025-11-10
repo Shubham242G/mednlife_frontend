@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 const AccountingServicesPage = () => {
-  const [openFAQ, setOpenFAQ] = useState(null);
+  
    const partners = [
     { id: 1, icon: "/assets/brand1.png" },
     { id: 2, icon: "/assets/brand3.png" },
@@ -104,7 +104,7 @@ const AccountingServicesPage = () => {
               <div className=" overflow-hidden h-[450px] flex items-center justify-center">
 
 
-                <img src="/assets/accounting-1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+                <img src="/assets/accounting-1st.jpg" className="rounded-md h-[400px] w-full mb-10" alt='Image'/>
 
               </div>
             </div>
@@ -314,7 +314,7 @@ const AccountingServicesPage = () => {
       <section className="py-20 px-4 bg-[#17ada1] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <img src='/assets/goals.jpg' className='rounded-md'/>
+            <img src='/assets/goals.jpg' className='rounded-md' alt='Image'/>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Where Healthcare Meets Finance</h2>
               <div className="space-y-5 text-sm leading-relaxed">

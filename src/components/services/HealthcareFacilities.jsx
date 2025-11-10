@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 const HealthcareFacilitiesPage = () => {
-  const [openFAQ, setOpenFAQ] = useState(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+ 
 
   const partners = [
     { id: 1, icon: "/assets/brand1.png" },
@@ -101,7 +100,7 @@ const HealthcareFacilitiesPage = () => {
               <div className=" overflow-hidden h-[450px] flex items-center justify-center">
 
 
-                <img src="/assets/healthcare-1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+                <img src="/assets/healthcare-1st.jpg" className="rounded-md h-[400px] w-full mb-10" alt='Image'/>
 
               </div>
             </div>

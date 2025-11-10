@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -9,8 +9,7 @@ const IntellectualPropertyPage = () => {
     { id: 3, icon: "/assets/brand4.png" },
     { id: 4, icon: "/assets/brand5.png" },
   ];
-  const [openFAQ, setOpenFAQ] = useState(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -88,7 +87,7 @@ const IntellectualPropertyPage = () => {
               <div className=" overflow-hidden h-[450px] flex items-center justify-center">
 
 
-                <img src="/assets/ip-1st.jpg" className="rounded-md h-[400px] w-full mb-10" />
+                <img src="/assets/ip-1st.jpg" className="rounded-md h-[400px] w-full mb-10" alt='Image'/>
 
               </div>
             </div>
