@@ -50,38 +50,15 @@ const ComplianceManagementPage = () => {
               </h2>
               <div className="space-y-4 leading-relaxed text-sm">
                 <p>
-                  Compliance management in healthcare involves implementing systematic processes to ensure your
-                  practice adheres to all applicable federal, state, and local regulations. This encompasses
-                  HIPAA privacy requirements, billing practices, employment laws, safety standards, and
-                  accreditation criteria.
+                  Compliance in Indian healthcare requires adherence to regulations from the NMC, the Clinical Establishments Act, and state-specific laws covering quality, ethics, and waste disposal.
                 </p>
                 <p>
-                  Healthcare providers face an increasingly complex regulatory landscape with overlapping requirements
-                  from multiple agencies including CMS, OCR, OSHA, and state health departments. Non-compliance can
-                  result in significant penalties, legal liability, reputation damage, and even loss of licensure.
+                  Providers must follow strict guidelines on patient data privacy and medical practices. Non-adherence risks severe penalties, including fines and loss of accreditation (NABH). 
                 </p>
                 <p>
-                  Effective compliance management requires ongoing monitoring of regulatory changes, staff training,
-                  policy development and updates, internal audits, risk assessments, and corrective action plans.
-                  It&apos;s not a one-time project but a continuous commitment to meeting legal and ethical obligations.
-                </p>
-                <p>
-                  Many healthcare practices struggle to maintain compliance due to limited resources, staff turnover,
-                  and the constantly evolving regulatory environment. Without dedicated compliance expertise, practices
-                  risk costly violations and operational disruptions.
-                </p>
-                <p>
-                  MednLaw provides comprehensive compliance management services that proactively identify risks,
-                  implement robust compliance programs, conduct regular audits, and ensure your practice stays ahead
-                  of regulatory requirements. We transform compliance from a burden into a strategic advantage.
+                  Effective compliance is ongoing, demanding audits and staff training. MedNLaw provides expertise to strategically manage this complex, evolving regulatory landscape, safeguarding practices against costly violations.
                 </p>
               </div>
-              <button className="mt-8 flex items-center text-white hover:text-teal-100 font-semibold transition-colors duration-300">
-                Talk To Our Experts
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
 
             {/* Right Image */}

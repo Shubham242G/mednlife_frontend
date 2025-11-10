@@ -65,12 +65,11 @@ const Footer = () => {
           <span className="block h-[2px] w-12 bg-[#17ada1]/60 mt-2 mx-auto md:mx-0"></span>
         </h3>
         <ul className="space-y-3 text-sm text-white/80 text-center md:text-left">
-          <li>
-            <a href="tel:8800141018" className="hover:text-[#17ada1]">8800141018</a> || 
+          <li> 
             <a href="tel:8596505338" className="hover:text-[#17ada1]"> 8596505338</a>
           </li>
           <li>
-            <a href="mailto:info@mednlaw.com" className="hover:text-[#17ada1]">info@MednLaw.in</a>
+            <a href="mailto:info@mednlaw.com" className="hover:text-[#17ada1]">info@mednlaw.in</a>
           </li>
           <li className="flex justify-center md:justify-start gap-4 mt-4">
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#17ada1]"><Linkedin size={20} /></a>
