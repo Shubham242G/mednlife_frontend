@@ -32,7 +32,7 @@ const ChatBot = () => {
 
   useEffect(() => {
     if (Object.keys(answers).length === questions.length) sendEmail();
-  }, [answers]);
+  }, [answers,questions.length, sendEmail]);
 
   const handleAnswer = (answer) => {
     const q = questions[currentQuestion];
