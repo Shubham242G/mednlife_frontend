@@ -252,11 +252,7 @@ const AboutUs = () => {
                             Gaurav Sharma
                         </h4>
                         <p className="text-gray-600 leading-relaxed text-lg">
-                            Founder, MedNLaw — Bridging medicine and law for a safer, ethical and
-                            transparent healthcare ecosystem. With deep expertise in medico-legal
-                            disputes, regulatory frameworks, and patient rights, Gaurav has led
-                            MedNLaw to become India’s foremost healthcare legal advisory
-                            initiative.
+                            Gaurav Sharma, Mednlaw's founder, blends Law (Delhi University) and Healthcare Management (IIM Calcutta). Driven by purpose, he offers compassionate legal support in Healthcare Law, prioritizing the emotional well-being and professional protection of medical providers. His expertise ensures transparency and ethical navigation of complex regulatory challenges in the healthcare ecosystem.
                         </p>
                     </motion.div>
                 </div>
