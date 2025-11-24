@@ -118,7 +118,7 @@ const IntellectualPropertyPage = () => {
                         whileHover={{ scale: 1.06 }}
                         whileTap={{ scale: 0.96 }}
                         onClick={() => {
-                          const phoneNumber = "+918595650338";
+                          const phoneNumber = "+919266877793";
                           const message = "Hi, I'm interested in learning more about your legal services.";
                           const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                           window.open(whatsappUrl, "_blank");

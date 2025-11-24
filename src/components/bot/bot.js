@@ -85,7 +85,7 @@ const ChatBot = () => {
 
   const handleWhatsAppRedirect = () => {
     const msg = `Hi, here are my details:\nName: ${answers.name || 'N/A'}\nEmail: ${answers.email || 'N/A'}\nService: ${answers.service || 'N/A'}`;
-    window.open(`https://wa.me/+918595650338?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/+919266877793?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   const resetChat = () => {
