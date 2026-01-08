@@ -22,10 +22,11 @@ const Navigation = () => {
   }, [location]);
 
   const navLinks = [
-    { to: "/about-us", label: "About Us" },
-    { to: "/services", label: "Services" },
-    { to: "/contact-us", label: "Contact Us" },
-  ];
+  { to: "/about-us", label: "About Us" },
+  { to: "/services", label: "Services" },
+  { to: "/blog", label: "Blog" },        // ← Add this
+  { to: "/contact-us", label: "Contact Us" },
+];
 
   return (
     <header

@@ -18,6 +18,8 @@ import ChatBot from "./components/bot/bot";
 import ScrollToTop from "./components/scrollToTop";
 import HealthcareStartupAdvisoryPage from "./components/services/HealthcareStartupAdvisoryPage";
 import ContactForm from "./components/home/Contact";
+import BlogPost from "./components/blogs/BlogPost";
+import BlogSection from "./components/blogs/BlogSection";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
             <Route path="/services/licenses-and-renewals" element={<LicensesRenewalsPage/>} />
             <Route path="/services/healthcare-startup-advisory" element={<HealthcareStartupAdvisoryPage/>}/>
             <Route path="/services/accounting-services" element={<AccountingServicesPage/>}/>
+            <Route path="/blog" element={<BlogSection />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
           </Routes>
         <ChatBot/>
       <Footer/>
