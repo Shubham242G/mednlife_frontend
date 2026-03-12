@@ -21,7 +21,7 @@ const BlogSection = () => {
 
   useEffect(() => {
     fetchBlogs();
-  }, [fetchBlogs]);
+  }, [page]);
 
   const fetchBlogs = async () => {
     try {

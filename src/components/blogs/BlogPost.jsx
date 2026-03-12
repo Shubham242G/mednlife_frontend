@@ -10,7 +10,7 @@ const BlogPost = () => {
 
   useEffect(() => {
     fetchBlog();
-  }, [id, fetchBlog]);
+  }, [id]);
 
   const fetchBlog = async () => {
   try {
